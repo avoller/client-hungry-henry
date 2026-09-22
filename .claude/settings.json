@@ -1,0 +1,12 @@
+{
+  "enabledPlugins": {
+    "studio-guide@studio": true,
+    "studio-ops@studio": true,
+    "house-style@studio": true,
+    "discovery@studio": true,
+    "product-workbook@studio": true,
+    "requirements-set@studio": true,
+    "visuals@studio": true,
+    "design-system@studio": true
+  }
+}
