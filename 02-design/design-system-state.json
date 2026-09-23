@@ -1,0 +1,42 @@
+{
+  "runId": "hh-icons-actions-2026-09-22",
+  "phase": "phase3",
+  "step": "complete",
+  "fileKey": "KgGqrjgtSA4Zh5hiI7yUiM",
+  "pages": {
+    "journey": "0:1",
+    "foundations": "2023:112",
+    "primitives": "2023:113",
+    "screens": "2023:114",
+    "icons": "2032:5"
+  },
+  "entities": {
+    "components": {
+      "icon": "2033:35",
+      "button": "2024:10",
+      "actionButton": "2034:50",
+      "actionGroup": "2034:269",
+      "navItem": "2034:308",
+      "titlePill": "2024:16",
+      "macroRow": "2024:32",
+      "dietPill": "2024:37",
+      "bottomNav": "2026:93",
+      "imLookingForCollapsed": "2024:51",
+      "mapPin": "2026:108",
+      "foodRow": "2026:109",
+      "restaurantDrawer": "2026:158"
+    }
+  },
+  "completedSteps": [
+    "phase0-libraries",
+    "phase1-tokens",
+    "phase2-pages",
+    "component-icon",
+    "component-action-button",
+    "component-action-group",
+    "component-nav-item",
+    "component-bottom-nav",
+    "rename-property-value",
+    "apply-screens"
+  ]
+}

@@ -157,3 +157,51 @@ Unsourced claims in the Hungry Henry engagement. Client-supplied figures are not
 - **Depends on it:** Workbook §1.8 selected-problem total (3.2 billion meals/year); §1.10 statement; §2.7 problem row.
 - **Raised:** 2026-09-21
 - **Resolved:** —
+
+## ASM-014 — Tea Green steps other than 100 are derived
+
+- **Claim:** Tea Green 50, 75, 200–900 are OKLCH steps from #D0E3C4, not further Coolors swatches.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** high
+- **Basis:** Client supplied five hexes. The token schema only holds one accent ramp, so Tea Green is locked at accent.100 and the rest of its column is generated.
+- **Test:** Client reviews the Foundations colour board and accepts or replaces any derived Tea Green step.
+- **Depends on it:** Figma styles `tea-green/*`; document table header stays `{color.accent.100}`.
+- **Raised:** 2026-09-22
+- **Resolved:** —
+
+## ASM-015 — Rusty Spice is primary.600, not 500
+
+- **Claim:** #B43B1F belongs on 600 by OKLab lightness (L 0.52), so 500 is a lighter derived step.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** high
+- **Basis:** accessible-palette rule: do not shift the client's hex; park it on the nearest step.
+- **Test:** Client looks at rusty-spice/500 vs rusty-spice/600 on the Foundations board and says which one is "their" red.
+- **Depends on it:** Match CTA (`primary.base` → 600); `surface.focusRing`.
+- **Raised:** 2026-09-22
+- **Resolved:** —
+
+## ASM-016 — 75-steps exist only as Figma styles
+
+- **Claim:** Atlassian-style 75 stops (muted-olive/75, etc.) are paint styles, not tokens, because the studio schema forbids a 75 key.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** high
+- **Basis:** tokens.schema.json accent/primary ramps allow 50 and 100, 200…900 only.
+- **Test:** If a consumer needs 75, extend the schema and add it to tokens.json in the same commit.
+- **Depends on it:** Foundations colour board; any component that might use a 75 wash.
+- **Raised:** 2026-09-22
+- **Resolved:** —
+
+## ASM-017 — Nutrition range bounds come from the current match set
+
+- **Claim:** The Advanced range slider's min and max are the option bounds Henry can currently present, not a fixed 0–4000 kcal scale.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** medium
+- **Basis:** Client description of Advanced / range. No rule yet for how those bounds are computed (percentiles of nearby menus vs remaining daily target).
+- **Test:** Confirm with the signatory before G2: bounds are "what restaurants nearby can serve" or "what is left on your plan".
+- **Depends on it:** Nutrition filter Range state; `/filters` copy under the slider.
+- **Raised:** 2026-09-22
+- **Resolved:** —
