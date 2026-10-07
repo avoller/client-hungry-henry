@@ -9,7 +9,7 @@ TBA
 
 ### 1. Fertile Land
 
-Resturants
+Restaurants
 
 ### 2. Actor
 
@@ -298,29 +298,122 @@ The first product owns two places on the future-state map: **high nutrition-goal
 
 ### 1. MVP Product Concept Outline
 
-TBA
+Hungry Henry v1.0 serves one market focus: the Dine-Out Regulars segment, the Macro-Tracking Dine-Out Regulars niche, the Dine-Out use case, and the Cheat-Meal Guilt Problem. The positions to own are high nutrition-goal filtering and low time to a decision.
+
+**Product Name:** Hungry Henry
+
+**Purpose:** To find a restaurant meal.
+
+**Product Category:** Calorie Counter Apps. Existing category. Evidence: Apple lists *MyFitnessPal: Calorie Counter App* in Health & Fitness;[8] MyFitnessPal answers "Is MyFitnessPal a free calorie tracker app?" on its homepage;[11] Capterra lists the class as *Calorie Tracking Software*.[12] Hungry Henry is filed here because the Actor already opens this class to check a restaurant dish. Differentiation is inside the category: Henry builds the plate to the remaining target before the meal, rather than logging a dish after it.
+
+**Main Attributes:**
+- **Search and Discovery** — generate a restaurant plate (one or more foods from one nearby restaurant) that meets, or is close enough to, the remaining energy / protein / carbs / fat target.
+- **Personalization** — lock a restaurant or a food; treat locked nutrition as constant and rebuild the rest of the plate.
+- **Location and Mapping** — show only restaurants that currently have a match, with Google rating and distance.
+- **Location and Proximity** — distance from the Fitness Enthusiast on the plate and on the map.
+- **Advanced Math Computations** — hit or a plus/minus diff on energy, protein, carbs, and fat for the plate on screen.
+- **Standard GenAI** — Ask Henry: a sentence becomes a plate.
+- **Collaboration and Sharing** — on the Match screen, a Share control sends the confirmed plate, so a finished meal can bring in the next person.
+
+These are the v1 capabilities. Search and Discovery, Personalization, and the macro math create the position-to-own: a goal filter and a short path to a chosen meal. Share sits on the finished Match. Save, collections, restaurant listing tiers, and delivery checkout are outside this outline.
+
+**Software Deliverables:** iOS app
+
+**Physical Deliverables:** none
+
+**Input/Output Methods:** touchscreen; visual display; GPS
+
+**Production Infrastructure:** public cloud
+
+**Product Data:**
+- **Sources** — Google Places (place identity, rating, distance); restaurant menus (titles, calories, allergens where posted); USDA FoodData Central (reference nutrient values when a menu line is incomplete).
+- **Completeness** — Places is sufficient for venue identity. Menus are often names and prices only; missing macros must be estimated or listed by the operator.
+- **Timeliness** — Places is a live lookup. Menus are static until the operator updates them or the ingest is refreshed. FoodData Central is updated on USDA's release cycle, not per order.
+- **Usage** — Places under Google Maps Platform terms. FoodData Central is public domain (USDA requests attribution). Menu text is taken from public postings or from the operator's listing.
+- **Technical** — Places and FoodData Central over HTTPS as JSON. Menu items are stored as structured records (title, optional course, energy, protein, fat, carbs, allergen).
 
 ### 2. User Views
 
-TBA
+Happy path for the market-focus use case **Dine-Out**. Actor: Fitness Enthusiast. JTBD: to find a restaurant meal. Desired outcome: a confirmed plate in about 3 minutes that stays near the remaining target. One list. No login, account setup, or edge cases.
+
+1. **Start Hungry Henry on an iPhone.** The product opens on Filters, with energy, protein, carbs, and fat off.
+2. **Set the remaining target.** Turn energy on and choose *less* with a kcal value; turn protein on and choose *more* with a gram value; turn on one diet or allergy (for example pescatarian or shellfish). The product stores those targets and marks the rows on.
+3. **Leave Filters for Home.** The product generates a plate from a nearby restaurant: restaurant name, Google stars, and distance at the top; a stacked list of foods (name, optional course, kcal and protein); a macro row for energy, protein, carbs, and fat with a hit or a plus/minus diff; diet or allergy pills under the macros. Large Forward and Match buttons sit under the plate.
+4. **Lock a food already wanted** (tap that food's title). The product marks the food locked, locks the restaurant with it, and keeps that item's nutrition constant.
+5. **Tap Forward.** The product bumps unlocked foods out and new foods in, one by one. The locked food stays. The macro row updates against the same target.
+6. **Tap Match.** The product records that the Fitness Enthusiast will eat this plate and shows the chosen foods and the final macros. A Share control on that screen sends the confirmed plate. The job is finished.
+
+Entry point: open the iOS app after deciding to eat a restaurant meal. Completion point: Match — a confirmed plate, no checkout.
 
 ### 3. Functional Requirements
 
-TBA
+Happy-path features from the outline, the sequential list, and the prototype. Actor: Fitness Enthusiast.
+
+| No. | Feature | Requirement |
+| --- | --- | --- |
+| 1 | Remaining energy target | As a Fitness Enthusiast, I want to set energy to less, is, or more of a kcal value so that each plate is judged against the energy I have left. |
+| 2 | Remaining protein target | As a Fitness Enthusiast, I want to set protein to less, is, or more of a gram value so that each plate is judged against the protein I still want. |
+| 3 | Remaining carb target | As a Fitness Enthusiast, I want to set carbs to less, is, or more of a gram value so that each plate is judged against the carbs I have left. |
+| 4 | Remaining fat target | As a Fitness Enthusiast, I want to set fat to less, is, or more of a gram value so that each plate is judged against the fat I have left. |
+| 5 | Diet constraint | As a Fitness Enthusiast, I want to turn on a diet so that plates exclude foods that break that diet. |
+| 6 | Allergy constraint | As a Fitness Enthusiast, I want to turn on an allergy so that a plate that contains that allergen is not presented as a match. |
+| 7 | Search and Discovery | As a Fitness Enthusiast, I want a plate generated from one nearby restaurant so that I can see a meal that meets, or is close enough to, my remaining targets. |
+| 8 | Location and Mapping | As a Fitness Enthusiast, I want the plate to name the restaurant so that I know where the meal is. |
+| 9 | Location and Mapping | As a Fitness Enthusiast, I want the plate to show the restaurant's star rating so that I can judge the venue before I match. |
+| 10 | Location and Proximity | As a Fitness Enthusiast, I want the plate to show distance from me so that I know how far the restaurant is. |
+| 11 | Food stack | As a Fitness Enthusiast, I want each food on the plate named with its energy and protein so that I can see what I would eat. |
+| 12 | Advanced Math Computations | As a Fitness Enthusiast, I want the plate compared to my remaining energy, protein, carbs, and fat so that I can see a hit or a plus/minus before I match. |
+| 13 | Personalization | As a Fitness Enthusiast, I want to lock a food on the plate so that later plates keep that food. |
+| 14 | Personalization | As a Fitness Enthusiast, I want the restaurant locked when I lock a food so that later plates stay at that restaurant. |
+| 15 | Forward | As a Fitness Enthusiast, I want unlocked foods replaced with different foods from the same restaurant so that I can try another combination against the same remaining target. |
+| 16 | Match | As a Fitness Enthusiast, I want to confirm the plate I will eat so that the search ends on a chosen meal. |
+| 17 | Collaboration and Sharing | As a Fitness Enthusiast, I want the confirmed plate sent to another person so that they can see the meal I will eat. |
+| 18 | Standard GenAI | As a Fitness Enthusiast, I want a sentence I type turned into a plate so that I can skip reading posted menus. |
 
 ### 4. Context View
 
-TBA
+![Context view — Hungry Henry and the external actors and systems it exchanges data with](visuals/context-view.png)
 
 ### 5. Non-Functional Requirements
 
-TBA
+| No. | Kind | Requirement | Feature |
+| --- | --- | --- | --- |
+| 1 | Latency | When Hungry Henry opens on the happy path, latency shall be ultra-low (less than 2 ms) so that the first screen feels instantaneous. | Remaining-target filters |
+| 2 | Latency | When initial options are returned after a search, latency shall not exceed medium (200 ms to 1 second). | Search and Discovery |
+| 3 | Latency | When new meal options are presented, latency shall be low (2 to 200 ms) so that the next plate feels instantaneous. | Forward |
+| 4 | Usability | Hungry Henry shall enable a first-time Fitness Enthusiast to confirm a plate within 3 minutes without prior instruction. | Match |
+| 5 | Availability | The product shall be available 99.9% of the year. | |
+| 6 | Compatibility | The iOS app shall operate on iPhone running the current iOS release and the two previous major releases (N-2). | |
+| 7 | Security | The product shall enforce a medium-level of security to minimize risk from organized hacker groups. | |
+| 8 | Privacy | The product shall have a medium-level of data privacy as it contains PII (location, remaining targets, diet, allergy) that may fall under CCPA/CPRA or similar state privacy laws and does not contain actionable financial information. | |
+| 9 | Accuracy | When a menu line posts energy, the plate shall display that posted kcal value for 100% of such lines. | Advanced Math Computations |
+| 10 | Accuracy | When energy is taken from USDA FoodData Central, the plate shall mark the value as estimated. | Advanced Math Computations |
+| 11 | Safety | The product will operate in situations where failures could lead to injuries or moderate environmental damage. | Allergy constraint |
+| 12 | Safety | When a menu line posts an allergen, the plate shall display that allergen. | Allergy constraint |
+| 13 | Interoperability | Hungry Henry shall get place identity, rating, and distance from Google Places. | Location and Mapping |
+| 14 | Interoperability | Hungry Henry shall get item titles, posted calories, and posted allergens from restaurant websites. | Search and Discovery |
+| 15 | Interoperability | Hungry Henry shall get reference nutrient values from USDA FoodData Central when a menu line is incomplete. | Advanced Math Computations |
 
 ## 4. Customer Value Space
 
 ### 1. Product Features and Benefits
 
-TBA
+Benefits are relative to the current state (Google Maps and posted menus). The quantified time benefit is the outcome gap already sized in Problem Sizing.
+
+| Feature | Benefit(s) |
+| --- | --- |
+| Remaining-target filters | Faster restaurant-meal search: Ave. Meal Search Time from 23 minutes to 3 minutes, which is 20 minutes saved per occasion.[1] |
+| Diet and allergy filters | Fewer off-plan plates than guessing a diet or allergen from a posted menu that often omits that information. |
+| Search and Discovery | A nearby plate that meets remaining targets, instead of a venue list ranked on rating, distance, cuisine, and price. |
+| Personalization | A locked food stays while the rest of the plate rebuilds, so a picky plate does not restart the 23-minute hunt. |
+| Location and Mapping | Only restaurants that currently have a match, so the Fitness Enthusiast does not inspect venues that cannot fit. |
+| Location and Proximity | Distance sits on the plate, so they do not leave the table to open Maps. |
+| Food stack | The foods to eat are visible as a plate, instead of a PDF list of names. |
+| Advanced Math Computations | Lower cheat-meal calorie scatter: Ave. Cheat-Meal Calorie SD from 500 kcal to 150 kcal, because the plus/minus is on the plate (`assumption:`). |
+| Forward | Another combination in one step, instead of rebuilding the plate by hand on the restaurant site. |
+| Match | A confirmed meal ends the search, instead of walking away still unsure. |
+| Standard GenAI | A sentence becomes a plate, so they skip scanning posted menus. |
+| Collaboration and Sharing | The finished plate can go to another person, instead of screenshotting a tracker. |
 
 ### 2. Pricing Model
 
@@ -386,4 +479,150 @@ See the table in §2.6. All scores are `assumption:`.
 
 ### Familiarity
 
-The fertile land is Resturants. The Actor and JTBD are taken from the client's notes and from first-hand use of Maps, restaurant sites and a nutrition tracker to find a meal that does not blow a plan.
+The fertile land is Restaurants. The Actor and JTBD are taken from the client's notes and from first-hand use of Maps, restaurant sites and a nutrition tracker to find a meal that does not blow a plan.
+
+### Prototyping Input Sheet
+
+Initial sheet, copied from the body before any prototype concept is generated. One software deliverable. This wording is not updated when later concepts change an input.
+
+**Problem**
+
+**Actor:** Fitness Enthusiast
+
+**Job To Be Done:** To find a restaurant meal.
+
+**Problem (outcome gap):** Ave. Meal Search Time is 23 minutes and will be 3 minutes (20 minutes extra per occasion). Ave. Plan Completion Rate is 30% and will be 75%. Ave. Cheat-Meal Calorie SD is 500 kcal and will be 150 kcal.
+
+**Cause(s) of the problem:** Root — no product treats the Actor's personal nutrition targets as a filter on restaurant meal discovery. Contributing — discovery products do not filter by personal nutrition goals; restaurants post menus, not nutrition; missing macros are guessed; substitutions and course selection are left to mental math.
+
+**Use Case(s):** Dine-Out
+
+**Positioning**
+
+**Position-to-own:** A restaurant meal matched to your target, without the 23-minute hunt. (High nutrition-goal filtering and low time to a decision.)
+
+**MVP Product Idea**
+
+**Product Name:** Hungry Henry
+
+**Product Category:** Calorie Counter Apps
+
+**Main Attributes:** Search and Discovery (generate a restaurant plate to the remaining target); Personalization (lock a restaurant or a food and rebuild the rest); Location and Mapping (only restaurants that currently have a match); Location and Proximity (distance on the plate and map); Advanced Math Computations (hit or plus/minus on energy, protein, carbs, fat); Standard GenAI (Ask Henry).
+
+**Software Deliverables:** iOS app
+
+**Physical Deliverables:** none
+
+**Input/Output methods:** touchscreen; visual display; GPS
+
+**Production Infrastructure:** public cloud
+
+**Product Data:** Google Places (place, rating, distance; live; Maps Platform terms; HTTPS/JSON). Restaurant menus (titles, calories, allergens; often incomplete; static until updated). USDA FoodData Central (reference nutrients; public domain; HTTPS/JSON).
+
+**User View**
+
+**Sequential list (task flow):**
+
+1. Start Hungry Henry on an iPhone. The product opens on Filters, with energy, protein, carbs, and fat off.
+2. Set the remaining target. Turn energy on and choose *less* with a kcal value; turn protein on and choose *more* with a gram value; turn on one diet or allergy (for example pescatarian or shellfish). The product stores those targets and marks the rows on.
+3. Leave Filters for Home. The product generates a plate from a nearby restaurant: restaurant name, Google stars, and distance at the top; a stacked list of foods (name, optional course, kcal and protein); a macro row for energy, protein, carbs, and fat with a hit or a plus/minus diff; diet or allergy pills under the macros.
+4. Lock a food already wanted (tap that food's title). The product marks the food locked, locks the restaurant with it, and keeps that item's nutrition constant.
+5. Tap Forward. The product bumps unlocked foods out and new foods in, one by one. The locked food stays. The macro row updates against the same target.
+6. Tap Match. The product records that the Fitness Enthusiast will eat this plate and shows the chosen foods and the final macros. The job is finished.
+
+### Prototyping Analysis
+
+Three concepts, each generated in the same AI prototyping tool and compared with the input sheet that produced it. Concept 2 and Concept 3 each change one item on that sheet. The two changes are different kinds. The initial Prototyping Input Sheet above is unchanged.
+
+**1. Prototype Concept No. 1**
+
+Generated from the initial Prototyping Input Sheet. Compare the prototype with the expectations on that sheet.
+
+What was missing in the AI-generated prototype concept?
+
+The next required step. The sequential list sends the Fitness Enthusiast from Filters to Home, then to lock a food, tap Forward, and tap Match. Home rendered the whole plate at once — restaurant name, stars, distance, the food stack, the macro row, and the diet pills — and no control read as the next action. The path stalled there.
+
+What was unnecessary in the AI-generated prototype concept?
+
+Two features the happy path does not use. **Pin throughout** kept a restaurant pin on screen after the place was chosen. **Calorie banking** turned the plus/minus on the current plate into a standing balance. The sheet asks for a hit or a plus/minus on the current plate, and for distance on that plate. It does not ask for either of those features.
+
+What was unexpected but valuable in the AI-generated prototype concept?
+
+Filter groups. Step 2 only says to turn energy and protein on and to turn on one diet or allergy. The prototype split Filters into groups, which makes that step scannable, and the groups are kept. The design of this first concept was good, and it is the reference the later design system was checked against.
+
+The correction taken into Concept 2: large action buttons on Home, so Forward and Match are the obvious next steps.
+
+**2. Prototype Concept No. 2**
+
+Which ONE of the following did you change in your Prototyping Input Sheet to produce this prototype concept?
+
+- Change or improve the clarity of one problem space item (Actor, JTBD, outcome gap, cause of the problem, or use case)
+- Change the desired position-to-own (select a different position from the positioning map, add a position, or remove a position)
+- **Change or improve the clarity of the happy path in the sequential list**
+- Add, remove, or change one main attribute (a product feature or function)
+
+State the change that you made.
+
+The happy path on Home was rewritten so the next action is a large button. Forward and Match sit on the plate as the required steps. This is the direct response to Concept 1, where those steps were buried under the plate.
+  
+What was missing in the AI-generated prototype concept?
+
+A single gesture for the food. The new buttons did show Forward and Match, so that part of the updated sheet landed. Beside them, the model still offered a restaurant swiper. The sequential list moves one unlocked food at a time and keeps a locked food put. A second gesture that changes the restaurant hid that step.
+
+What was unnecessary in the AI-generated prototype concept?
+
+Restaurant information past the name, the stars, and the distance. People who tried the prototype found that block confusing, and the restaurant swiper was the control that carried it. The swiper came off. Movement stays at the food-item level: Forward bumps unlocked foods, and a locked food stays.
+
+What was unexpected but valuable in the AI-generated prototype concept?
+
+A full visual theme the sheet never specified. Colour and type are absent from the input, so the model invented a look, and the look was heavy and technical for a restaurant meal. That mismatch was useful: the theme was replaced with the Hungry Henry design system (calm, editorial, Rusty Spice only on Match) before the next concept.
+
+**3. Prototype Concept No. 3**
+
+Which ONE of the following did you change in your Prototyping Input Sheet to produce this prototype concept?
+
+- Change or improve the clarity of one problem space item (Actor, JTBD, outcome gap, cause of the problem, or use case)
+- Change the desired position-to-own (select a different position from the positioning map, add a position, or remove a position)
+- Change or improve the clarity of the happy path in the sequential list
+- **Add, remove, or change one main attribute (a product feature or function)**
+
+State the change that you made.
+
+One main attribute was added: Collaboration and Sharing. This is a different kind of change from Concept 2. The Match screen gains a Share control for the confirmed plate, so the finished meal can be sent on and bring in the next person. The restaurant swiper and the heavy theme were already corrected after Concept 2. They are not a second change on this sheet.
+
+What was missing in the AI-generated prototype concept?
+
+A way to pass the confirmed meal on. The Match screen showed the chosen foods and the final macros, which is the completion point in step 6, and it stopped there. Share was added on that screen for the acquisition path: each matched meal can travel to the next person.
+
+What was unnecessary in the AI-generated prototype concept?
+
+Nothing on the Match screen had to come off. It stayed on the finished plate. Pin throughout, calorie banking, and the restaurant swiper did not return.
+
+What was unexpected but valuable in the AI-generated prototype concept?
+
+The Match screen. It made the end of the job obvious: these foods, these macros, this plate. That screen is the completion point the final prototype keeps, with Share added on it.
+
+**4. Final Prototype Reflection**
+
+Why did you choose this as your final prototype to submit?
+
+The final prototype is the Dine-Out happy path with one correction from each concept.
+
+- From Concept 1: Filters stay in groups. Home uses large action buttons, so the next step is visible. Pin throughout and calorie banking stay out.
+- From Concept 2: the restaurant swiper stays out, and movement stays at the food-item level. The heavy technical theme stays out. The Hungry Henry design system is the look.
+- From Concept 3: the Match screen is the completion point. Share sits on that screen so a confirmed plate can bring in the next person.
+
+The path a Fitness Enthusiast still walks is the one on the initial sheet: set the remaining target, see one nearby plate, lock a food, move unlocked foods with Forward, and tap Match. Share does not add a step before that outcome.
+
+What did you learn about how your inputs affected the outputs?
+
+The model built whatever the sheet listed, and it filled gaps the sheet left open.
+
+The Home contents were written as a pile of information (name, stars, distance, foods, macros, pills) and the next tap was easy to miss, so Concept 1 rendered the pile and hid the path. The macro-math line and the mapping attribute became calorie banking and pin throughout, which are not steps on the list. Naming large Forward and Match buttons in Concept 2 made those controls appear, and an unspecified restaurant gesture and an unspecified visual theme still appeared beside them. Adding one attribute in Concept 3, Share, put one new control on a screen that was already doing its job. One change at a time showed which sentence the model obeyed and which blank it filled on its own.
+
+Did this prototyping process help you to create a better final prototype? Why or why not?
+
+Yes. Concept 1 showed that a complete Home is not a clear path, and it showed two features to drop. Concept 2 showed that larger buttons are not enough while a restaurant swiper and a heavy theme remain. Concept 3 showed that the Match screen is the right ending, and that Share belongs on it as the way a finished meal spreads. The final prototype is those three corrections on the original happy path.
+
+**Final prototype file (PDF or video):**
+

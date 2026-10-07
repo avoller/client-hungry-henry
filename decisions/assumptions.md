@@ -205,3 +205,63 @@ Unsourced claims in the Hungry Henry engagement. Client-supplied figures are not
 - **Depends on it:** Nutrition filter Range state; `/filters` copy under the slider.
 - **Raised:** 2026-09-22
 - **Resolved:** —
+
+## ASM-018 — TAM population is 786,206 US restaurants
+
+- **Claim:** The restaurant-side TAM uses RestaurantData's 1 August 2024 count of 786,206 operating restaurants, not the NRA's broader "more than 1 million foodservice outlets."
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** medium
+- **Basis:** RestaurantData is restaurant-specific. NRA's 1 million+ includes the wider foodservice set used in the $1.5T sales forecast.
+- **Test:** Re-run TAM with the next RestaurantData or NRA outlet count. If the restaurant-only figure moves more than 15%, replace 786,206 and recompute $1.41B.
+- **Depends on it:** Workbook §2.2 TAM; Product Idea Brief.
+- **Raised:** 2026-09-22
+- **Resolved:** —
+
+## ASM-019 — v1 menus are public-menu ingest plus USDA estimation
+
+- **Claim:** A restaurant does not have to list before a match can exist. Missing macros are estimated from USDA FoodData Central.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** medium
+- **Basis:** Context view already named USDA. Client notes say restaurants post menus, not nutrition. Operator listing is Free-tier capability, not a v1 gate.
+- **Test:** Confirm with the signatory before G2 whether unlisted restaurants appear in matches.
+- **Depends on it:** Workbook §3.1 technology; §3.4 context view; NF5; F12.
+- **Raised:** 2026-09-22
+- **Resolved:** —
+
+## ASM-020 — Next match and search return within 2 seconds
+
+- **Claim:** NF1 and NF2 use a 2-second latency budget.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** Judgement against the 3-minute desired search time. Not a measured SLO.
+- **Test:** Instrument p95 match generation and search in the first beachhead city. Confirm if p95 is under 2 seconds at the NF3 load.
+- **Depends on it:** Workbook §3.5 NF1, NF2.
+- **Raised:** 2026-09-22
+- **Resolved:** —
+
+## ASM-021 — Beachhead-city design load is 10,000 concurrent match requests
+
+- **Claim:** NF3 sizes Friday-night Home traffic at 10,000 concurrent match requests in one city.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** Order-of-magnitude for a first city, not a forecast.
+- **Test:** After 90 days in the beachhead city, replace with observed peak concurrent match requests × 2.
+- **Depends on it:** Workbook §3.5 NF3.
+- **Raised:** 2026-09-22
+- **Resolved:** —
+
+## ASM-022 — Paid mix 70% Free / 22% Silver / 8% Gold is a sensitivity only
+
+- **Claim:** Those shares produce a $776.40 blended ARPU and a $610 million figure. They are not the TAM.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** No operator interviews. Shown only as a mix sensitivity under §2.2.
+- **Test:** Same ten-operator interviews as ASM-007. Record which tier they would buy, if any.
+- **Depends on it:** Workbook §2.2 paid-mix paragraph only.
+- **Raised:** 2026-09-22
+- **Resolved:** —

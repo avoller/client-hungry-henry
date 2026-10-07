@@ -85,9 +85,9 @@ You've been strict on your nutrition plan all week. It's Friday night, and now i
 
 ### In Fact
 
-Every year there are XX million restaurant patrons in America. 55% of them are guilty the next day because they're trying to lose weight.
+Every year there are 81 million restaurant patrons in America. 55% of them are guilty the next day because they're trying to lose weight.
 
-That's XX million Americans trying to find meals that fit their goals.
+That's 45 million Americans trying to find meals that fit their goals.
 
 ### So What We Do
 
@@ -95,7 +95,8 @@ We match you to your guilt-free cheat meal. Hungry Henry curates meals and cours
 
 Swipe through mains, add sides, substitute, and explore. Be as picky as you want with sacred cheat night — or let Henry find you the right option.
 
-We are B2B, and we reward restaurants who take the extra time to list their nutrition details with us, and who take the extra time to curate meals and courses for the XX million of us who are nutrition conscious.
+We are B2B, and we reward restaurants who take the extra time to list their nutrition details with us, and who take the extra time to curate meals and courses for the 88 million of us who are nutrition conscious.
+
 
 ### To Get Started
 
@@ -232,3 +233,38 @@ Allow users to give feature requests and upvote others.
 
 ---
 
+
+
+
+DRAFT
+
+System Overview & Core Philosophy
+Value proposition for the 81M fitness enthusiast market (resolving 23-minute meal paralysis down to < 3 minutes).
+Mobile-first touch ergonomics (
+ touch targets, thumb-reach layout).
+Warm editorial aesthetic (Fraunces serif, Plus Jakarta Sans, JetBrains Mono, warm cream #FAF6F0, Rusty Spice #B43B1F, Herb Sage #4E6B38).
+Screen & Page-Based Views
+HomePlateView.tsx (Home Plate): Tinder-style plate swiper, card drag gestures with PASS/MATCH visual stamps, 5 circular action buttons, and stacked dish pinning.
+FiltersView.tsx (Targets): Calorie & macro tolerance sliders, comparison modes (is, less, more, off), fitness presets (e.g. Lean Gains, Keto, Endurance), and dietary exclusions.
+MapView.tsx (Map): Geospatial map pinning venues with confirmed macro matches, bottom sheet plate preview, and single-tap plate loader.
+SearchView.tsx (Ask Henry): Natural language query engine ("What are you craving?") paired with real-time dish and restaurant catalog search.
+AccountView.tsx (Collections): Value dashboard (search time saved, adherence rate), Saved Plates collection, Recent Matches, and rolling Nutrition Bank ledger.
+OperatorPortalView.tsx (Operator Portal): B2B venue claiming flow, neighborhood fitness search demand analytics, and dish macro management (Restaurant Listed vs. USDA FoodData est.).
+Global & Shared Components
+TopNav.tsx: Chef Henry avatar, occasion selector (Dine-Out, Takeout, Delivery), rolling Nutrition Bank counter, and operator portal toggle.
+BottomTabBar.tsx: Docked bottom navigation with live match counters.
+MacroRow.tsx: Differential grid comparing plate totals vs. user targets with color-coded delta tolerances and live banking notices.
+AddMenuDrawer.tsx: Course-based restaurant menu drawer for manual item additions.
+MatchCelebrationModal.tsx: Match confirmation modal with Google Maps navigation handoff and time saved metrics.
+Key Features & Mechanics
+"Select Throughout" Pinning & Rebuild: Lock a venue or individual dish while regenerating unpinned sides to hit remaining macros.
+Tinder-Style Swiper Action Bar: Rewind (Amber), Pass (Rose), Pin Venue (Cyan), Rebuild Unselected (Purple), and Match (Rusty Spice Heart).
+Rolling Nutrition Bank: Automatic rollover of daily surpluses/deficits to eliminate cheat-meal guilt.
+Multi-Source Nutrition Provenance: Distinguishing verified restaurant data from USDA FoodData estimates.
+Key User Flows
+Flow 1: 3-Minute Quick Match (The North Star Path).
+Flow 2: "Select Throughout" Dish Pinning & Rebuild.
+Flow 3: Natural Language Craving Match ("Ask Henry").
+Flow 4: Restaurant Operator Free Claiming & Macro Ingestion.
+Data Architecture & State Contracts
+Core data models (Plate, MacroTargets, NutritionBank, MatchRecord, Restaurant, MenuItem).
