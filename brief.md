@@ -28,7 +28,7 @@ config:
     already pay for a nutrition tracker, and can be reached where they already
     log food — so the pain is frequent, they have shown willingness to pay for
     adjacent tools, and access is cheap.
-  price_point: $0 consumer; restaurant Free / Pro Silver / Pro Gold
+  price_point: Free $0 per member; Paid $14.40 per member per year. Restaurant visibility fees are primary revenue and are excluded from the workbook.
   north_star: Meals Matched
   north_star_definition: >
     The moment a Fitness Enthusiast presses Match on a restaurant meal they
@@ -97,7 +97,20 @@ config:
     - nutrition-goal filtering
     - time to a decision
   position_to_own: a restaurant meal matched to your target, without the 23-minute hunt
-  consumer_price: $0
+  consumer_price: $0 on Free; $14.40 per member per year on Paid
+  pricing_strategy: segmented
+  pricing_metric: per member
+  pricing_price_paid: $14.40 per member per year
+  pricing_payment: >
+    Free: frequency none, timing none, no charge. Paid: once per year,
+    at the start of the term, charged to the Fitness Enthusiast by card
+    or app-store purchase.
+  product_category: Restaurant and meal discovery
+  hungry_henry_match: >
+    Recommendations curated from meals already liked. One plate is gifted
+    with the paid plan and may include a discount at a participating
+    restaurant. No discount amount is set.
+  ask_henry: Rate limited on Free. Unlimited on Paid. The free cap is not numbered.
   restaurant_tiers:
     - Free
     - Pro Silver
@@ -136,9 +149,12 @@ The service is free to the consumer. Businesses pay for SaaS to get more views o
 - **JTBD** — raw idea said "Find a meal." Accurate as a task, but too general for Dining Out (it also covers home cooking). Changed to **find a restaurant meal** / **To find a restaurant meal.** No outcome word was added.
 - **Problem Category** — raw idea said "Meal and restaurant search". Tightened to **Meal Search Problem** so it labels the problem, not the product category.
 - **Use cases** — notes named dine-out and delivery and left a third value blank. **Takeout** was added so the go-to-meal scheme has three distinct, important cases.
+- **Consumer price** — the notes said the service is free to the consumer. Kept as the Free tier ($0 per member, unlimited swipes, calorie and protein range only). A Paid tier at $14.40 per member per year unlocks fat, carbohydrate, and micronutrient filters and the operators is / less / more. Restaurant visibility fees stay the primary revenue and are not priced in the workbook.
+- **Hungry Henry Match** — the paid plan includes recommendations curated from meals already liked, and one gifted plate, which may also carry a discount at a participating restaurant. No discount amount was stated, so none is used in the price or the benefit-to-cost ratio.
+- **Category** — Hungry Henry is restaurant and meal discovery, not a calorie counter. Ask Henry is rate limited on Free and unlimited on Paid. The free cap is not numbered.
 
 ## Open questions
 
-- Restaurant tier prices (Pro Silver / Pro Gold) were never stated. Marked assumption in the workbook.
+- Restaurant tier prices (Pro Silver / Pro Gold) were never stated. They are excluded from this workbook's pricing model. The Fitness Enthusiast price is the one in §4.
 - Signatory beyond the engagement author is unset.
 - Exemplar reuse is still `pending`.

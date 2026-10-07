@@ -82,7 +82,7 @@ Unsourced claims in the Hungry Henry engagement. Client-supplied figures are not
 - **Confidence:** low
 - **Basis:** Client named the three tiers and the capabilities, not the dollars.
 - **Test:** Ten operator interviews: "Would you pay $X / month to appear in nutrition-filtered matches?" Walk the price from $79 to $499.
-- **Depends on it:** Pricing, when §4 is completed. TAM, when completed, will use these.
+- **Depends on it:** Not used in workbook §2.2 or §4. Those sections price the Fitness Enthusiast membership only. Restaurant prices stay outside this workbook.
 - **Raised:** 2026-09-21
 - **Resolved:** —
 
@@ -93,8 +93,8 @@ Unsourced claims in the Hungry Henry engagement. Client-supplied figures are not
 - **Owner:** Alex Voller
 - **Confidence:** medium
 - **Basis:** Order-of-magnitude US hourly wage, not a willingness-to-pay study.
-- **Test:** Not required for v1 pricing (consumer is $0). Revisit if a consumer paid tier is added.
-- **Depends on it:** Pricing justification, when §4.2 is completed.
+- **Test:** Not a willingness-to-pay study. Replace with the median hourly wage of a 30-person sample of Macro-Tracking Dine-Out Regulars if it falls outside $15–$25.
+- **Depends on it:** Workbook §4.2 paid price ($14.40) and §4.4 benefit-to-cost ratio.
 - **Raised:** 2026-09-21
 - **Resolved:** —
 
@@ -262,6 +262,42 @@ Unsourced claims in the Hungry Henry engagement. Client-supplied figures are not
 - **Confidence:** low
 - **Basis:** No operator interviews. Shown only as a mix sensitivity under §2.2.
 - **Test:** Same ten-operator interviews as ASM-007. Record which tier they would buy, if any.
-- **Depends on it:** Workbook §2.2 paid-mix paragraph only.
+- **Depends on it:** Workbook §2.2 paid-mix paragraph only. That paragraph is not in the workbook. §2.2 uses the core-offer price and a 100% assumption, not this mix.
 - **Raised:** 2026-09-22
+- **Resolved:** —
+
+## ASM-023 — Paid filters account for 6 minutes of the search-time gap
+
+- **Claim:** The free calorie-and-protein range removes the 14-minute venue search. The paid filters remove 6 minutes of the 9-minute seated decision (9 − 3), because the desired search leaves 3 minutes.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** The 14 minutes and 9 minutes are US Foods. The split of which tier removes which block is not measured.
+- **Test:** Time 20 stringent Fitness Enthusiasts on a posted menu with only a calorie and protein range, then again with fat, carbohydrate, is/less/more, and a micronutrient profile. The paid tier's price holds if the median difference is 4–8 minutes.
+- **Depends on it:** Workbook §4.2 price of $14.40. If the 6 minutes is wrong, the paid price and the §4.4 ratio move with it.
+- **Raised:** 2026-10-07
+- **Resolved:** —
+
+## ASM-024 — Ten minutes to set the paid filters the first time
+
+- **Claim:** Entering fat, carbohydrate, is/less/more, and a micronutrient profile takes 10 minutes once, worth $3.33 at $20 an hour.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** A first-run estimate. Not timed.
+- **Test:** Time the same 20 people from install to a saved paid target. Replace $3.33 if the median is outside 5–20 minutes.
+- **Depends on it:** Workbook §4.3 year-1 setup cost and the §4.4 ratio ($17.73).
+- **Raised:** 2026-10-07
+- **Resolved:** —
+
+## ASM-025 — The Fitness Enthusiast already has an iPhone
+
+- **Claim:** The iOS app does not require a new phone, so acquiring it adds no device cost.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** medium
+- **Basis:** The v1 deliverable is an iPhone app, and the beachhead already uses a phone for Maps and a tracker. No device-ownership figure was sourced.
+- **Test:** Ask the 20-person sample which phone they use. If fewer than 15 have an iPhone, the acquire cost needs an Android deliverable or a device line.
+- **Depends on it:** Workbook §4.3 acquiring costs.
+- **Raised:** 2026-10-07
 - **Resolved:** —

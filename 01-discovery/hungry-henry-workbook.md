@@ -3,7 +3,17 @@ By Alex Voller
 
 ## Product Idea Brief
 
-TBA
+The purpose of this brief is to propose Hungry Henry, a restaurant and meal discovery product which aims to solve sustainable eating challenges by providing nutritionally compliant restaurant meal options. Secondly, this brief will outline the problem, how Hungry Henry is different from the way a meal is found today, the market value, and the price. 
+
+What that person needs to do is find a restaurant meal. That search takes 23 minutes today, and it should take 3. A weekly plan is finished 30 percent of the time, and it should be finished 75 percent of the time. A cheat meal scatters 500 kcal around the calories still left, and it should scatter 150 kcal. Restaurants post names and prices, not a nutrition record. Google Maps and the other tools nearby rank on rating, distance, cuisine, and price, not on a personal target. A main, a side, and a swap are done by hand. On 72 restaurant meals a year, 55 percent blow the plan or go untracked: 39.6 such meals per person per year, and 3.2 billion such meals a year among the 81 million people who belong to a fitness facility.[1][2][13]
+
+Hungry Henry is an iPhone app, with no physical product. It curates meals and courses from restaurants nearby that meet, or come close to, the nutrition still left that day. The plate shows the restaurantn be locked, the rest of the plate can move, and the meal can be confirmed and shared. A sentence to Ask Henry becomes a plate. This happens before the order, which is how the hunt becomes a meal chosen to fit. The first version is the sit-down meal, for the person who already logs macros closely, because that is where a posted menu does the most damage., the rating, the distance, the foods, and a hit or a plus-or-minus on energy, protein, carbohydrates, and fat. 
+
+The market is those 81 million people, and membership grew 5.2 percent from 2024 to 2025.[2] If every one of them bought the paid membership once a year at $14.40, the total addressable market would be $1,166,400,000 and 81 million memberships. That assumes everyone buys. It is the size of the opportunity, not a forecast, and it excludes restaurant fees. Those fees are the primary revenue of the business, from restaurants paying to have meals seen, and they are not analyzed here. People find a place today with Google Maps, which covers the restaurants and does not choose the meal, and the search still takes 23 minutes. Hungry Henry is the option that curates the meal to the target and reaches a decision in about 3 minutes.
+
+The meal is free to find. Free includes unlimited swipes, a range on calories and a range on protein, and Ask Henry up to a rate limit. The price is $0 because that is enough to tell Henry a goal and start matching, and a fee should not sit on the job. Paid is $14.40 per person per year, charged once a year at the start to that person, by card or the app store. It widens the filters to fat, carbohydrates, and micronutrients, with is, less, and more. It recommends plates curated from meals already liked, and one Hungry Henry Match is gifted; that plate may include a discount at a participating restaurant. Ask Henry is unlimited, where Free stops at the rate limit.
+
+The benefit against today's search is 20 minutes saved on each restaurant meal, 24 hours a year, worth $480 at $20 an hour (`assumption:`). The cheat meal sits closer to the calorie target, and the week's plan is more likely to be finished. The paid recommendations are the extra: a plate drawn from meals already liked, a possible discount on that restaurant bill, and the time not spent rebuilding a menu. First-year costs that can be stated in money are the $14.40 and $3.33 to set the stricter filters once. $480 against $17.73 is about 27.1 to 1. The decision takes minutes and ends if it is not renewed, which is compelling at about 3 to 1. At 27.1 to 1 the paid plan is compelling for the person who wants those recommendations and unlimited Ask Henry. Anyone else stays on Free.
 
 ## 1. Customer Problem Space
 
@@ -144,7 +154,13 @@ Trend: **growing.** Membership rose 5.2% from 2024 to 2025, and 20% from 2019 to
 
 ### 2. Total Addressable Market (TAM)
 
-Course note: do not complete until the last Product Assignment.
+The price is the paid membership, the core offer in the Pricing Model, at $14.40 per member per year. It is not an average of the free and paid prices. Purchases per year equal 1, because the metric is one membership and the paid plan is charged once a year. The actor count is the Overall Market count, 81 million.[2]
+
+`TAM (revenue) = 81,000,000 Fitness Enthusiasts × $14.40 per member × 1 purchase per year = $1,166,400,000 per year`
+
+`TAM (units) = 81,000,000 Fitness Enthusiasts × 1 purchase per year = 81,000,000 memberships per year`
+
+This assumes every Fitness Enthusiast in the named market buys the paid membership. It is not a forecast and it applies no conversion rate. The primary revenue of the business is expected from restaurants paying for visibility of their meals. That analysis is excluded from this workbook, and those fees are not in the figures above.
 
 ### 3. Market Segmentation
 
@@ -304,7 +320,7 @@ Hungry Henry v1.0 serves one market focus: the Dine-Out Regulars segment, the Ma
 
 **Purpose:** To find a restaurant meal.
 
-**Product Category:** Calorie Counter Apps. Existing category. Evidence: Apple lists *MyFitnessPal: Calorie Counter App* in Health & Fitness;[8] MyFitnessPal answers "Is MyFitnessPal a free calorie tracker app?" on its homepage;[11] Capterra lists the class as *Calorie Tracking Software*.[12] Hungry Henry is filed here because the Actor already opens this class to check a restaurant dish. Differentiation is inside the category: Henry builds the plate to the remaining target before the meal, rather than logging a dish after it.
+**Product Category:** Restaurant and meal discovery. Existing category. Evidence: Google Maps is how a Fitness Enthusiast already finds a nearby restaurant, and Google describes Ask Maps as conversational discovery on that map.[7] Hungry Henry is filed here because the job is to find a restaurant meal before the order. Calorie counter apps log a dish after a venue is chosen. They are a substitute, not this category.[8][11]
 
 **Main Attributes:**
 - **Search and Discovery** — generate a restaurant plate (one or more foods from one nearby restaurant) that meets, or is close enough to, the remaining energy / protein / carbs / fat target.
@@ -412,20 +428,64 @@ Benefits are relative to the current state (Google Maps and posted menus). The q
 | Advanced Math Computations | Lower cheat-meal calorie scatter: Ave. Cheat-Meal Calorie SD from 500 kcal to 150 kcal, because the plus/minus is on the plate (`assumption:`). |
 | Forward | Another combination in one step, instead of rebuilding the plate by hand on the restaurant site. |
 | Match | A confirmed meal ends the search, instead of walking away still unsure. |
-| Standard GenAI | A sentence becomes a plate, so they skip scanning posted menus. |
+| Standard GenAI | Ask Henry turns a sentence into a plate. Free is rate limited. Paid is unlimited, so the Fitness Enthusiast can keep asking until the plate fits. |
 | Collaboration and Sharing | The finished plate can go to another person, instead of screenshotting a tracker. |
+| Hungry Henry recommendations | Plates curated from meals the Fitness Enthusiast has liked, so the next option resembles what they already wanted, and the 23-minute search is skipped. One Hungry Henry Match is gifted on the paid plan and may include a discount at a participating restaurant. |
 
 ### 2. Pricing Model
 
-TBA
+This is what the Fitness Enthusiast pays. Restaurants pay to have meals seen. That analysis is excluded here.
+
+**Price-setting strategy.** Segmented. Free is the anchor. Paid is the core offer, for a Fitness Enthusiast who wants Henry's recommendations, a stricter filter, and Ask Henry without a cap. No third tier.
+
+| Tier | Who it is for | Bundle | Price | Metric |
+| --- | --- | --- | --- | --- |
+| Free (anchor) | A calorie and protein range is enough. | Unlimited swipes and the rest of the app. Filters: a range on calories and protein only. Ask Henry is rate limited. | $0 | per member |
+| Paid (core offer) | Wants recommendations and a stricter plan. | Everything in Free. Filters add fat, carbohydrates, micronutrients, and is / less / more. Recommendations curated from liked meals, including one gifted Hungry Henry Match that may carry a restaurant discount. Ask Henry is unlimited. | $14.40 per year | per member |
+
+**Pricing metric.** Per member: one Fitness Enthusiast's access to a tier for a year. A month would be how often the fee is collected, not what is bought. A per-request metric would charge the person who asks Henry most, and the paid plan removes that cap. Swipes are unlimited on both tiers, so the fee is not per swipe. One membership is easy to count and to enforce.
+
+**Price.** Free is $0 per member. A calorie and protein range is enough to find a meal, so a fee should not sit on that job. Ask Henry on Free is rate limited. The cap is not numbered here.
+
+Paid is $14.40 per member per year, one-tenth of the time value of the stricter filters. Free already removes the 14-minute venue search. The paid filters remove the other 6 minutes of the gap from 23 minutes to 3, on each of 72 meals (`assumption:`).
+
+`6 / 60 × 72 × $20 = $144 per year` (`assumption:` $20 per hour)
+
+`0.10 × $144 = $14.40 per member per year`
+
+Google Maps, how the meal is found today, costs $0, so this job has no paid reference price.[7]
+
+**Recommendations.** Henry curates plates from meals the Fitness Enthusiast has already liked, at restaurants nearby, inside the target still left. That is the paid difference a wider filter does not make on its own. It replaces the posted-menu hunt: 20 minutes saved per meal.
+
+`20 / 60 × 72 × $20 = $480 per year`
+
+One of those plates is gifted as a Hungry Henry Match. A participating restaurant may discount it. No discount amount is set, so the discount is not inside the $14.40. It lowers the restaurant bill for that plate. The third paid difference is Ask Henry with no rate limit, so the same curation can be asked for until the plate is right.
+
+**Payment structure.** Free has no charge. Paid is once per year, at the start, charged to the Fitness Enthusiast by card or the app store.
 
 ### 3. Customer Cost Items
 
-TBA
+Costs of getting the benefits. The transaction cost is the price above.
+
+**Acquiring.** Paid is $14.40 per member per year. Free is $0. No shipping. No new phone (`assumption:` the iPhone is already owned).
+
+**Using.** Setting the paid filters takes 10 minutes once: `10 / 60 × $20 = $3.33` in the first year (`assumption:`). The 3 minutes still spent on a meal are already removed from the 20 minutes saved.
+
+**Having.** The $14.40 recurs each year and includes the recommendations and unlimited Ask Henry. Stopping payment returns the account to the free range and the rate limit. Location, nutrition targets, and meals liked stay on the account. That privacy cost has no dollar figure. No accessory and no second app are required.
+
+**Disposing.** Cancel before renewal. No cancellation fee. Delete the app. No disposal charge.
 
 ### 4. Customer Value Proposition Evaluation
 
-TBA
+The offer is that the total benefits exceed the total costs. The time benefit is the 20 minutes already sized, $480 a year. Recommendations are the gain a filter does not deliver on its own: the next plate is curated from meals already liked, one Hungry Henry Match is gifted, and that plate may be discounted at a participating restaurant. Unlimited Ask Henry keeps that curation available after Free would have hit the rate limit. Other benefits in the features table stand: cheat-meal scatter from 500 kcal to 150 kcal, and a plan finished 75 percent of the time rather than 30 percent. Only the time is summed in money. No discount amount is set, so a discount is not in the ratio. It would raise it.
+
+First-year costs are the fee and the setup.
+
+`$14.40 + $3.33 = $17.73`
+
+`$480 / $17.73 = 27.1`
+
+The ratio is 27.1:1 against today's 23-minute search. Paying is low friction: $14.40, a decision in minutes, and the plan ends if it is not renewed. Low friction is compelling at about 3:1. The paid offer is compelling for the Fitness Enthusiast who wants those recommendations and unlimited Ask Henry. Privacy is outside the ratio and does not make this a high-friction purchase. Free remains the right plan when a calorie and protein range, and a rate limit, are enough.
 
 ## Appendix
 
