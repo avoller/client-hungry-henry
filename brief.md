@@ -28,7 +28,35 @@ config:
     already pay for a nutrition tracker, and can be reached where they already
     log food — so the pain is frequent, they have shown willingness to pay for
     adjacent tools, and access is cheap.
-  price_point: $0 consumer; restaurant Free / Pro Silver / Pro Gold
+  price_point: >
+    Free $0 per member; Paid $14.40 per member per year. Restaurant listing
+    fees are excluded from this workbook.
+  pricing_strategy: segmented
+  pricing_metric: per member
+  consumer_price: $0 Free per member; $14.40 Paid per member per year
+  paid_price: $14.40 per member per year
+  paid_price_basis: >
+    Free includes every macro, so the 20-minute search saving ($480 a year)
+    is on Free. Paid is one-tenth of an assumed $144 a year for the extras
+    (recommendations, micronutrient targets, unlimited Ask Henry): 6/60 × 72
+    × $20 = $144, and 0.10 × $144 = $14.40. Those 6 minutes are not a slice
+    of the 23-to-3 gap. Google Maps costs $0, so there is no paid reference
+    price.
+  product_goals: >
+    Modeling targets, not a forecast. EOY 3 total users = 1% of 9,112,500
+    Macro-Tracking Dine-Out Regulars = 91,125. Constant progression:
+    EOY 1 = 30,375; EOY 2 = 60,750. Free-to-paid 30:1. Units sold are Paid
+    memberships: 980, 1,960, and 2,940.
+  vision_statement: >
+    Hungry Henry will make dieting fun, flexible, and achievable. Ten years
+    from now a Fitness Enthusiast wants the carbonara at the local Italian,
+    the late delivery, or Tuesday night at their own stove, and they get it —
+    delicious, satisfying, and still on the goal — because the meal was built
+    for their taste and for whatever the day has left.
+  vision_horizon: 10 years
+  tam_revenue: $1,166,400,000 per year
+  tam_units: 81,000,000 memberships per year
+  hourly_value: $20 per hour
   north_star: Meals Matched
   north_star_definition: >
     The moment a Fitness Enthusiast presses Match on a restaurant meal they
@@ -97,7 +125,6 @@ config:
     - nutrition-goal filtering
     - time to a decision
   position_to_own: a restaurant meal matched to your target, without the 23-minute hunt
-  consumer_price: $0
   restaurant_tiers:
     - Free
     - Pro Silver
@@ -136,6 +163,7 @@ The service is free to the consumer. Businesses pay for SaaS to get more views o
 - **JTBD** — raw idea said "Find a meal." Accurate as a task, but too general for Dining Out (it also covers home cooking). Changed to **find a restaurant meal** / **To find a restaurant meal.** No outcome word was added.
 - **Problem Category** — raw idea said "Meal and restaurant search". Tightened to **Meal Search Problem** so it labels the problem, not the product category.
 - **Use cases** — notes named dine-out and delivery and left a third value blank. **Takeout** was added so the go-to-meal scheme has three distinct, important cases.
+- **Consumer price** — raw idea said the service is free. The workbook now uses segmented pricing: Free at $0 per member, Paid at $14.40 per member per year. Free includes every macro. Restaurant listing fees stay out of this workbook.
 
 ## Open questions
 

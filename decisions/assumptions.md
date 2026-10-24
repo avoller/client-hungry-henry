@@ -82,19 +82,19 @@ Unsourced claims in the Hungry Henry engagement. Client-supplied figures are not
 - **Confidence:** low
 - **Basis:** Client named the three tiers and the capabilities, not the dollars.
 - **Test:** Ten operator interviews: "Would you pay $X / month to appear in nutrition-filtered matches?" Walk the price from $79 to $499.
-- **Depends on it:** Pricing, when §4 is completed. TAM, when completed, will use these.
+- **Depends on it:** Not used in §2.2 or §4. Those sections price the consumer membership and exclude restaurant fees. Reopen if a later section prices the operator.
 - **Raised:** 2026-09-21
 - **Resolved:** —
 
 ## ASM-008 — Actor time valued at $20 / hour
 
-- **Claim:** Used to turn 23 minutes into $7.67 per occasion and $552 / year.
+- **Claim:** The Fitness Enthusiast's time is worth $20 per hour. Used for the paid price ($144 of filter time × 10% = $14.40), the $480 search-time benefit, and the $3.33 setup cost.
 - **Status:** open
 - **Owner:** Alex Voller
 - **Confidence:** medium
 - **Basis:** Order-of-magnitude US hourly wage, not a willingness-to-pay study.
-- **Test:** Not required for v1 pricing (consumer is $0). Revisit if a consumer paid tier is added.
-- **Depends on it:** Pricing justification, when §4.2 is completed.
+- **Test:** Ask 30 beachhead users what an hour of their evening is worth, as a range. Confirm if the median sits between $15 and $30.
+- **Depends on it:** Workbook §4.2 price; §4.3 setup cost; §4.4 ratio; Product Idea Brief.
 - **Raised:** 2026-09-21
 - **Resolved:** —
 
@@ -209,14 +209,14 @@ Unsourced claims in the Hungry Henry engagement. Client-supplied figures are not
 ## ASM-018 — TAM population is 786,206 US restaurants
 
 - **Claim:** The restaurant-side TAM uses RestaurantData's 1 August 2024 count of 786,206 operating restaurants, not the NRA's broader "more than 1 million foodservice outlets."
-- **Status:** open
+- **Status:** withdrawn
 - **Owner:** Alex Voller
 - **Confidence:** medium
 - **Basis:** RestaurantData is restaurant-specific. NRA's 1 million+ includes the wider foodservice set used in the $1.5T sales forecast.
-- **Test:** Re-run TAM with the next RestaurantData or NRA outlet count. If the restaurant-only figure moves more than 15%, replace 786,206 and recompute $1.41B.
-- **Depends on it:** Workbook §2.2 TAM; Product Idea Brief.
+- **Test:** —
+- **Depends on it:** —
 - **Raised:** 2026-09-22
-- **Resolved:** —
+- **Resolved:** 2026-10-24. §2.2 is the consumer membership TAM (81 million × $14.40). Restaurant fees are excluded.
 
 ## ASM-019 — v1 menus are public-menu ingest plus USDA estimation
 
@@ -257,11 +257,83 @@ Unsourced claims in the Hungry Henry engagement. Client-supplied figures are not
 ## ASM-022 — Paid mix 70% Free / 22% Silver / 8% Gold is a sensitivity only
 
 - **Claim:** Those shares produce a $776.40 blended ARPU and a $610 million figure. They are not the TAM.
-- **Status:** open
+- **Status:** withdrawn
 - **Owner:** Alex Voller
 - **Confidence:** low
 - **Basis:** No operator interviews. Shown only as a mix sensitivity under §2.2.
-- **Test:** Same ten-operator interviews as ASM-007. Record which tier they would buy, if any.
-- **Depends on it:** Workbook §2.2 paid-mix paragraph only.
+- **Test:** —
+- **Depends on it:** —
 - **Raised:** 2026-09-22
+- **Resolved:** 2026-10-24. That mix is not in the workbook. §2.2 assumes 100% buy the $14.40 core offer.
+
+## ASM-023 — Free removes the 14-minute venue search
+
+- **Claim:** Free removes the whole 14-minute venue search. Paid filters remove the other 6 minutes of the gap from 23 minutes to 3, on each of 72 meals.
+- **Status:** withdrawn
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** The 14 and 9 minutes are US Foods. Assigning the 6 minutes to Paid macros was the split.
+- **Test:** —
+- **Depends on it:** —
+- **Raised:** 2026-10-24
+- **Resolved:** 2026-10-24. Every macro is on Free, so the 20-minute saving is on Free. The $144 figure is reused in ASM-026 as a value for the paid extras, not as a slice of this gap.
+
+## ASM-024 — Setting the macro filters takes 10 minutes once
+
+- **Claim:** A first-time Fitness Enthusiast spends 10 minutes setting energy, protein, carbohydrate, and fat filters, once. Those filters are on Free.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** Judgement. No timed session.
+- **Test:** Watch 15 first-time setups. Confirm if the median is under 15 minutes.
+- **Depends on it:** Workbook §4.3 using cost ($3.33); §4.4 Free ratio (144.1:1); Product Idea Brief.
+- **Raised:** 2026-10-24
+- **Resolved:** —
+
+## ASM-025 — The iPhone is already owned
+
+- **Claim:** Acquiring Hungry Henry does not include the price of a phone.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** high
+- **Basis:** The only software deliverable is an iOS app, and the beachhead already logs food on a phone. No device is sold.
+- **Test:** On the same 15 first-time setups, ask whether they bought a phone for this. A single yes reopens the acquiring cost.
+- **Depends on it:** Workbook §4.3 acquiring cost. If a phone is required, the Free 144.1:1 ratio falls.
+- **Raised:** 2026-10-24
+- **Resolved:** —
+
+## ASM-026 — Paid extras are worth 6 minutes per meal
+
+- **Claim:** Recommendations, micronutrient targets, and unlimited Ask Henry are worth 6 minutes per meal, $144 a year at $20 an hour. The paid price is 10% of that, $14.40.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** The dollar figure is the old 6-minute calculation, kept after those minutes stopped being a slice of the 23-to-3 gap. It is not a measured willingness to pay.
+- **Test:** A three-price test with 30 beachhead Fitness Enthusiasts at $8, $14.40, and $24 per year for the paid extras only. Confirm if the median they would pay sits within $5 of $14.40.
+- **Depends on it:** Workbook §4.2 price; §4.4 paid ratio (10:1); §2.2 TAM; Product Idea Brief.
+- **Raised:** 2026-10-24
+- **Resolved:** —
+
+## ASM-027 — EOY 3 share of the beachhead is 1%
+
+- **Claim:** Three years after introduction, Hungry Henry has 1% of Macro-Tracking Dine-Out Regulars, 91,125 Fitness Enthusiasts.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** High end of the Major band in the Class 1 benchmarks (0.2% to 1%), chosen because switching cost is low, price is low, and direct competitors are few. Not a measured share.
+- **Test:** At EOY 3, compare installed Fitness Enthusiasts in the niche with 9,112,500. Confirm if the share is between 0.2% and 1%.
+- **Depends on it:** Workbook §5.1 every user and unit target. A lower share scales all six counts.
+- **Raised:** 2026-10-24
+- **Resolved:** —
+
+## ASM-028 — 30 free Fitness Enthusiasts per paying one
+
+- **Claim:** For every Paid membership there are 30 Free memberships.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** Top of the Class 1 band for AI products where free use is expensive to serve (10:1 to 30:1), and the founder's 30:1 rule of thumb. Free already completes the meal, so 10:1 would overstate payment.
+- **Test:** After EOY 1, divide Free installs by Paid memberships. Confirm if the ratio is between 20:1 and 40:1.
+- **Depends on it:** Workbook §5.1 paid, free, and units-sold rows. Total users do not move.
+- **Raised:** 2026-10-24
 - **Resolved:** —

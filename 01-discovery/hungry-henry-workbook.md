@@ -1,9 +1,24 @@
 # Product Idea Workbook
+
 By Alex Voller
+
+## Executive Summary
+
+TBA
 
 ## Product Idea Brief
 
-TBA
+The purpose of this brief is to propose Hungry Henry, a calorie counter app for people who keep a fitness or nutrition plan and still eat restaurant meals, and to secure executive support to find out whether it can become a successful, differentiated product.
+
+What that person needs to do is find a restaurant meal. That search takes 23 minutes today, and it should take 3. A weekly plan is finished 30 percent of the time, and it should be finished 75 percent of the time. A cheat meal scatters 500 kcal around the calories still left, and it should scatter 150 kcal. Restaurants post names and prices, not a nutrition record. Google Maps and the other tools nearby rank on rating, distance, cuisine, and price, not on a personal target. A main, a side, and a swap are done by hand. On 72 restaurant meals a year, 55 percent blow the plan or go untracked: 39.6 such meals per person per year, and 3.2 billion such meals a year among the 81 million people who belong to a fitness facility.[1][2][13]
+
+Hungry Henry is an iPhone app, with no physical product. It curates meals and courses from restaurants nearby that meet, or come close to, the nutrition still left that day. The plate shows the restaurant name, the rating, the distance, the foods, and a hit or a plus-or-minus on energy, protein, carbohydrates, and fat. A food can be locked, the rest of the plate can move, and the meal can be confirmed and shared. A sentence to Ask Henry becomes a plate. This happens before the order, which is how the hunt becomes a meal chosen to fit. The first version is the sit-down meal, for the person who already logs macros closely, because that is where a posted menu does the most damage.
+
+The market is those 81 million people, and membership grew 5.2 percent from 2024 to 2025.[2] If every one of them bought the paid membership once a year at $14.40, the total addressable market would be $1,166,400,000 and 81 million memberships. That assumes everyone buys, and it leaves out restaurant fees. Those fees, paid so a meal is seen, are the primary revenue and are not in this figure. People find a place today with Google Maps, which covers the restaurants and does not choose the meal, and the search still takes 23 minutes. Hungry Henry is the option that curates the meal to the target and reaches a decision in about 3 minutes.
+
+The meal is free to find. Free includes unlimited swipes, every macro — energy, protein, carbohydrates, and fat, each as is, less, or more — and Ask Henry up to a rate limit. The price is $0 because that is enough to tell Henry a goal and start matching, and a fee should not sit on the job. Paid is $14.40 per person per year, charged once a year at the start to that person, by card or the app store. It adds micronutrient targets and plates curated from meals already liked, including one gifted Hungry Henry Match that may include a discount at a participating restaurant. Ask Henry is unlimited, where Free stops at the rate limit.
+
+The benefit against today's search is 20 minutes saved on each restaurant meal, 24 hours a year, worth $480 at $20 an hour (`assumption:`). That saving comes with Free, because every macro is on Free. The cheat meal sits closer to the calorie target, and the week's plan is more likely to be finished. The paid extras — recommendations, micronutrient targets, and unlimited Ask Henry — are assumed worth $144 a year, against the $14.40 fee, which is 10 to 1. First-year setup is $3.33, so Free is $480 against $3.33, about 144 to 1. Both are low-friction decisions, and low friction is compelling at about 3 to 1. Anyone who only wants the match stays on Free.
 
 ## 1. Customer Problem Space
 
@@ -17,7 +32,7 @@ Restaurants
 
 A Fitness Enthusiast is a person actively pursuing a fitness or nutrition plan who still wants to eat restaurant meals, and who is at risk of abandoning that plan when menus do not show how a meal fits their targets.
 
-The Fitness Enthusiast is Initiator, Primary User, Decider, and Buyer of the consumer product. A second customer concept — the Restaurant Operator — is Buyer of the B2B listing tiers, and is not developed as the course Actor.
+The Fitness Enthusiast initiates, uses, decides, and buys the consumer product. The Restaurant Operator buys the listing tiers.
 
 ### 3. Job To Be Done
 
@@ -27,32 +42,35 @@ To find a restaurant meal.
 
 ### 4. Outcomes
 
-| Outcome idea | Metric | Actual Outcome | Desired Outcome | Measurement Method |
-| --- | --- | --- | --- | --- |
-| Faster meal find | Ave. Meal Search Time | The Ave. Meal Search Time is 23 minutes. | The Ave. Meal Search Time will be 3 minutes. | **Calculate:** minutes from the trigger (decide to eat a restaurant meal) to a confirmed item selection, averaged across occasions. Actual = 14 minutes selecting a restaurant + 9 minutes deciding what to order once seated.[1] Units: minutes per occasion. |
-| Broken mundane nutrition cycle | Ave. Plan Completion Rate | The Ave. Plan Completion Rate is 30%. | The Ave. Plan Completion Rate will be 75%. | **Calculate:** `(weekly cycles finished ÷ weekly cycles started) × 100`. A cycle is finished if the Actor logs through the week's last planned day without abandoning the plan. Units: percent. *(assumption: actual 30% is informed by Helander et al. 2020 — new January dieters persist about 3.1–5.3 weeks, so most intended weekly cycles in a longer plan are not finished;[6] desired 75% is 45 percentage points above that DIY baseline.)* |
-| Less next-day guilt | Ave. Cheat-Meal Calorie SD | The Ave. Cheat-Meal Calorie SD is 500 kcal. | The Ave. Cheat-Meal Calorie SD will be 150 kcal. | **Calculate:** sample SD of caloric deviation on cheat meals, `SD = sqrt(Σ(d_i − d̄)² / (n − 1))`, then averaged across Actors. `d_i` = calories of cheat meal *i* − the Actor's remaining calorie target for that meal. Units: kcal. Actual 500 kcal is the spread when the plate is guessed from a posted menu *(assumption)*. Desired 150 kcal is a tight enough band around the intended cheat that the meal reads as guilt-free. |
+| Outcome idea                   | Metric                     | Actual Outcome                              | Desired Outcome                                  | Measurement Method                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------------------------ | -------------------------- | ------------------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Faster meal find               | Ave. Meal Search Time      | The Ave. Meal Search Time is 23 minutes.    | The Ave. Meal Search Time will be 3 minutes.     | **Calculate:** minutes from the trigger (decide to eat a restaurant meal) to a confirmed item selection, averaged across occasions. Actual = 14 minutes selecting a restaurant + 9 minutes deciding what to order once seated.[1] Units: minutes per occasion.                                                                                                                                                                                      |
+| Broken mundane nutrition cycle | Ave. Plan Completion Rate  | The Ave. Plan Completion Rate is 30%.       | The Ave. Plan Completion Rate will be 75%.       | **Calculate:** `(weekly cycles finished ÷ weekly cycles started) × 100`. A cycle is finished if the Actor logs through the week's last planned day without abandoning the plan. Units: percent. _(assumption: actual 30% is informed by Helander et al. 2020 — new January dieters persist about 3.1–5.3 weeks, so most intended weekly cycles in a longer plan are not finished;[6] desired 75% is 45 percentage points above that DIY baseline.)_ |
+| Less next-day guilt            | Ave. Cheat-Meal Calorie SD | The Ave. Cheat-Meal Calorie SD is 500 kcal. | The Ave. Cheat-Meal Calorie SD will be 150 kcal. | **Calculate:** sample SD of caloric deviation on cheat meals, `SD = sqrt(Σ(d_i − d̄)² / (n − 1))`, then averaged across Actors. `d_i` = calories of cheat meal _i_ − the Actor's remaining calorie target for that meal. Units: kcal. Actual 500 kcal is the spread when the plate is guessed from a posted menu _(assumption)_. Desired 150 kcal is a tight enough band around the intended cheat that the meal reads as guilt-free.                |
 
 **Outcome 1 — Faster meal find** (`Ave. Meal Search Time`)
+
 - Actual Outcome Statement: The Ave. Meal Search Time is 23 minutes.
 - Desired Outcome Statement: The Ave. Meal Search Time will be 3 minutes.
 - Measurement Method: minutes from trigger to confirmed item selection, averaged across occasions. Units: minutes per occasion. Source: US Foods.[1]
 
 **Outcome 2 — Broken mundane nutrition cycle** (`Ave. Plan Completion Rate`)
+
 - Actual Outcome Statement: The Ave. Plan Completion Rate is 30%.
 - Desired Outcome Statement: The Ave. Plan Completion Rate will be 75%.
 - Measurement Method: `(weekly cycles finished ÷ weekly cycles started) × 100`. Units: percent. Source: Helander et al. 2020.[6]
 
 **Outcome 3 — Less next-day guilt** (`Ave. Cheat-Meal Calorie SD`)
+
 - Actual Outcome Statement: The Ave. Cheat-Meal Calorie SD is 500 kcal.
 - Desired Outcome Statement: The Ave. Cheat-Meal Calorie SD will be 150 kcal.
-- Measurement Method: `SD = sqrt(Σ(d_i − d̄)² / (n − 1))` of cheat-meal caloric deviations from the remaining target. Units: kcal. *(assumption: actual 500 kcal; desired 150 kcal.)*
+- Measurement Method: `SD = sqrt(Σ(d_i − d̄)² / (n − 1))` of cheat-meal caloric deviations from the remaining target. Units: kcal. _(assumption: actual 500 kcal; desired 150 kcal.)_
 
 <!-- portrait -->
 
 ### 5. Customer Journey Map
 
-Current-state journey: how a Fitness Enthusiast finds a restaurant meal today, without Hungry Henry. The journey starts after the trigger and ends when the meal is chosen.
+How a Fitness Enthusiast finds a restaurant meal today.
 
 <!-- landscape -->
 
@@ -60,12 +78,12 @@ Current-state journey: how a Fitness Enthusiast finds a restaurant meal today, w
 
 <!-- portrait -->
 
-| Layer | Choose Dining Mode | Search Nearby Venues | Inspect Posted Menus | Estimate Remaining Fit | Compose Mixed Plate | Confirm Chosen Meal |
-| --- | --- | --- | --- | --- | --- | --- |
-| Tasks | Check remaining macros; Pick dining occasion; Select dine-out mode; Gather companion input; Set location context | Open nearby maps; Scan nearby venues; Compare star ratings; Compare walking distance; Filter without goals ★ | Open restaurant site; Scroll posted menu; Hunt calorie labels ★; Screenshot candidate items; Switch candidate venue | Search item calories; Open tracker database; Guess missing macros ★; Subtract remaining budget; Reject oversized mains | Pick candidate main; Add possible sides; Calculate swaps by hand ★; Retotal combined plate; Abandon failed combo | Choose final venue; Lock chosen items; Place order or go; Save selected meal |
-| Experiences | Hopeful | Overwhelmed | Frustrated | Anxious | Resigned | Relieved |
-| Information | Macros remaining; Weeknight or cheat | Rating, distance; No goal filter | Names and prices; Nutrition missing | Partial calories; Daily budget left | Running total; Sides and swaps | Chosen items; Order confirm |
-| Touchpoints | Nutrition tracker; Calendar; Companions | Google Maps; Yelp; Apple Maps | Restaurant site; PDF menu; Phone browser | MyFitnessPal; Web search; Calculator | Notes app; Companions; Server or cart | Maps; Delivery app; Host stand |
+| Layer       | Choose Dining Mode                                                                                               | Search Nearby Venues                                                                                         | Inspect Posted Menus                                                                                                | Estimate Remaining Fit                                                                                                 | Compose Mixed Plate                                                                                              | Confirm Chosen Meal                                                          |
+| ----------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Tasks       | Check remaining macros; Pick dining occasion; Select dine-out mode; Gather companion input; Set location context | Open nearby maps; Scan nearby venues; Compare star ratings; Compare walking distance; Filter without goals ★ | Open restaurant site; Scroll posted menu; Hunt calorie labels ★; Screenshot candidate items; Switch candidate venue | Search item calories; Open tracker database; Guess missing macros ★; Subtract remaining budget; Reject oversized mains | Pick candidate main; Add possible sides; Calculate swaps by hand ★; Retotal combined plate; Abandon failed combo | Choose final venue; Lock chosen items; Place order or go; Save selected meal |
+| Experiences | Hopeful                                                                                                          | Overwhelmed                                                                                                  | Frustrated                                                                                                          | Anxious                                                                                                                | Resigned                                                                                                         | Relieved                                                                     |
+| Information | Macros remaining; Weeknight or cheat                                                                             | Rating, distance; No goal filter                                                                             | Names and prices; Nutrition missing                                                                                 | Partial calories; Daily budget left                                                                                    | Running total; Sides and swaps                                                                                   | Chosen items; Order confirm                                                  |
+| Touchpoints | Nutrition tracker; Calendar; Companions                                                                          | Google Maps; Yelp; Apple Maps                                                                                | Restaurant site; PDF menu; Phone browser                                                                            | MyFitnessPal; Web search; Calculator                                                                                   | Notes app; Companions; Server or cart                                                                            | Maps; Delivery app; Host stand                                               |
 
 ★ Causes — starred tasks are the contributing causes in §1.6.
 
@@ -73,11 +91,11 @@ Current-state journey: how a Fitness Enthusiast finds a restaurant meal today, w
 
 #### Gap
 
-| Metric | Desired | Actual | Gap (Desired − Actual) |
-| --- | --- | --- | --- |
-| Ave. Meal Search Time | 3 minutes | 23 minutes | 20 minutes extra per occasion |
-| Ave. Plan Completion Rate | 75% | 30% | 45 percentage points |
-| Ave. Cheat-Meal Calorie SD | 150 kcal | 500 kcal | 350 kcal wider spread |
+| Metric                     | Desired   | Actual     | Gap (Desired − Actual)        |
+| -------------------------- | --------- | ---------- | ----------------------------- |
+| Ave. Meal Search Time      | 3 minutes | 23 minutes | 20 minutes extra per occasion |
+| Ave. Plan Completion Rate  | 75%       | 30%        | 45 percentage points          |
+| Ave. Cheat-Meal Calorie SD | 150 kcal  | 500 kcal   | 350 kcal wider spread         |
 
 Fitness Enthusiasts cannot find a restaurant meal that fits their nutrition targets without a long manual search, because restaurants post menus rather than nutrition, discovery products do not filter by personal goals, and substitutions are left to mental math.
 
@@ -118,7 +136,7 @@ Frequency of the JTBD: 72 restaurant-meal occasions per Actor per year (`assumpt
 
 That is **3.2 billion blow-out or untracked restaurant meals per year in America.**
 
-The other gaps, for completeness:
+The other gaps:
 
 - Search time: `23 minutes − 3 minutes = 20 minutes` extra per occasion; `20 × 72 = 1,440 minutes` (24 hours) per Actor per year; `24 × 81,000,000 = 1.944 billion hours/year`.[1][2]
 - Plan completion: `75% − 30% = 45 percentage points` each weekly cycle. `52 × 30% = 15.6` weeks finished today; `52 × 75% = 39` weeks at the desired rate. The gap is 23.4 unfinished weeks per Actor per year (`assumption:` weekly cycle).[6]
@@ -144,65 +162,71 @@ Trend: **growing.** Membership rose 5.2% from 2024 to 2025, and 20% from 2019 to
 
 ### 2. Total Addressable Market (TAM)
 
-Course note: do not complete until the last Product Assignment.
+The price is the paid membership, $14.40 per member per year, charged once. The actor count is 81 million.[2]
+
+`TAM (revenue) = 81,000,000 Fitness Enthusiasts × $14.40 per member × 1 purchase per year = $1,166,400,000 per year`
+
+`TAM (units) = 81,000,000 Fitness Enthusiasts × 1 purchase per year = 81,000,000 memberships per year`
+
+This assumes every Fitness Enthusiast buys the paid membership. Restaurant fees for meal visibility are not in these figures.
 
 ### 3. Market Segmentation
 
-Scheme 1 uses the go-to-meal variable. The same variable is applied across every segment. Sizes are a partition of the 81 million Actors (`assumption:` primary mode, so each Actor is counted once).
+Go-to meal splits the 81 million Actors. Each person is counted once (`assumption:` primary mode).
 
-| Segmentation Variable | Segment Values | Segment Name | Segment Size |
-| --- | --- | --- | --- |
-| Go-to meal | Dine-Out | Dine-Out Regulars | 36.45 million (45%) |
-| Go-to meal | Delivery | Delivery Regulars | 22.68 million (28%) |
-| Go-to meal | Takeout | Takeout Regulars | 21.87 million (27%) |
+| Segmentation Variable | Segment Values | Segment Name      | Segment Size        |
+| --------------------- | -------------- | ----------------- | ------------------- |
+| Go-to meal            | Dine-Out       | Dine-Out Regulars | 36.45 million (45%) |
+| Go-to meal            | Delivery       | Delivery Regulars | 22.68 million (28%) |
+| Go-to meal            | Takeout        | Takeout Regulars  | 21.87 million (27%) |
 
 Notes: 45% dine-out as primary mode follows the US Foods finding that dining out holds a slight preference edge (55% vs 45% takeout/delivery) and is then pulled down so the three values sum to the market.[1] The 28% / 27% split of the remaining 55% is `assumption:`.
 
 A second scheme, used to name the beachhead, cuts on nutrition-tracking behaviour:
 
-| Segmentation Variable | Segment Values | Segment Name | Segment Size |
-| --- | --- | --- | --- |
-| Nutrition-tracking intensity | Daily macro log | Macro Trackers | 20.25 million (25%) |
-| Nutrition-tracking intensity | Has a plan, does not log daily | Goal-Aware | 36.45 million (45%) |
-| Nutrition-tracking intensity | Trains, loose nutrition | Fitness-Only | 24.30 million (30%) |
+| Segmentation Variable        | Segment Values                 | Segment Name   | Segment Size        |
+| ---------------------------- | ------------------------------ | -------------- | ------------------- |
+| Nutrition-tracking intensity | Daily macro log                | Macro Trackers | 20.25 million (25%) |
+| Nutrition-tracking intensity | Has a plan, does not log daily | Goal-Aware     | 36.45 million (45%) |
+| Nutrition-tracking intensity | Trains, loose nutrition        | Fitness-Only   | 24.30 million (30%) |
 
-Shares in scheme 2 are `assumption:`. The schemes are not multiplied in the market total; the beachhead below is the overlap used for entry, not a fourth segment added to 81 million.
+Shares in scheme 2 are `assumption:`.
 
 ### 4. Target Market Profiles
 
 **Dine-Out Regulars**
 
-| Field | Value |
-| --- | --- |
-| Segment name | Dine-Out Regulars |
-| Variables | Go-to meal |
-| Values | Dine-Out |
-| No. Actors | 36.45 million |
-| Growth | Growing with sit-down recovery; dine-in preference rose versus 2023 in the US Foods diner study.[1] |
+| Field        | Value                                                                                               |
+| ------------ | --------------------------------------------------------------------------------------------------- |
+| Segment name | Dine-Out Regulars                                                                                   |
+| Variables    | Go-to meal                                                                                          |
+| Values       | Dine-Out                                                                                            |
+| No. Actors   | 36.45 million                                                                                       |
+| Growth       | Growing with sit-down recovery; dine-in preference rose versus 2023 in the US Foods diner study.[1] |
 
-Homogeneous (same primary occasion), distinctive from delivery and takeout, measurable from diner studies, substantial, actionable (swipe + restaurant lock), accessible (maps, reviews, gym catchments).
+They share one occasion, diner studies size them, and they already open Maps at the table.
 
 **Delivery Regulars**
 
-| Field | Value |
-| --- | --- |
-| Segment name | Delivery Regulars |
-| Variables | Go-to meal |
-| Values | Delivery |
-| No. Actors | 22.68 million |
-| Growth | Takeout and delivery weekly use has risen versus 2022 (43% ordering takeout weekly or more).[4] |
+| Field        | Value                                                                                           |
+| ------------ | ----------------------------------------------------------------------------------------------- |
+| Segment name | Delivery Regulars                                                                               |
+| Variables    | Go-to meal                                                                                      |
+| Values       | Delivery                                                                                        |
+| No. Actors   | 22.68 million                                                                                   |
+| Growth       | Takeout and delivery weekly use has risen versus 2022 (43% ordering takeout weekly or more).[4] |
 
-Same six tests. Product difference: marketplace menus and no server; the Match still ends the JTBD.
+Marketplace menus, and no server. The Match still ends the job.
 
 **Macro Trackers**
 
-| Field | Value |
-| --- | --- |
-| Segment name | Macro Trackers |
-| Variables | Nutrition-tracking intensity |
-| Values | Daily macro log |
-| No. Actors | 20.25 million (`assumption:` 25% of 81 million) |
-| Growth | Tracker use rides the same fitness-membership trend.[2] |
+| Field        | Value                                                   |
+| ------------ | ------------------------------------------------------- |
+| Segment name | Macro Trackers                                          |
+| Variables    | Nutrition-tracking intensity                            |
+| Values       | Daily macro log                                         |
+| No. Actors   | 20.25 million (`assumption:` 25% of 81 million)         |
+| Growth       | Tracker use rides the same fitness-membership trend.[2] |
 
 This is the behaviour that makes nutrition-goal filtering a purchasing criterion. Accessible where they already log food.
 
@@ -210,31 +234,31 @@ This is the behaviour that makes nutrition-goal filtering a purchasing criterion
 
 Frame: a Fitness Enthusiast trying to find a restaurant meal. Options the Actor already perceives.
 
-| Kind | Option | Category |
-| --- | --- | --- |
-| Indirect | Google Maps (Google LLC) | Local search / maps |
-| Indirect | Calorie counter apps (category) | Food logging |
-| Indirect | Manual method | Substitute |
+| Kind     | Option                          | Category            |
+| -------- | ------------------------------- | ------------------- |
+| Indirect | Google Maps (Google LLC)        | Local search / maps |
+| Indirect | Calorie counter apps (category) | Food logging        |
+| Indirect | Manual method                   | Substitute          |
 
-None of the three sit in the same product category. There is no widely used product in *nutrition-goal-filtered restaurant meal matching*. That is the white space on the current-state map.
+None of the three sit in the same product category. There is no widely used product in _nutrition-goal-filtered restaurant meal matching_. That is the white space on the current-state map.
 
 **1. Google Maps (specific product)**
 
-| Field | Value |
-| --- | --- |
-| Brand name | Google Maps |
-| Company | Google LLC |
+| Field                   | Value                                                                                                                                                                                                                                                       |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Brand name              | Google Maps                                                                                                                                                                                                                                                 |
+| Company                 | Google LLC                                                                                                                                                                                                                                                  |
 | Competitive positioning | The complete local map: ratings, distance, photos, and hours for nearly every restaurant, now with Ask Maps conversational discovery. Claimed differentiator is place coverage plus getting the Actor from search to directions without leaving the map.[7] |
 
 Maps finds a venue, not a plate that fits a nutrition target.
 
 **2. Calorie counter apps (product category)**
 
-| Field | Value |
-| --- | --- |
-| Product category | Calorie counter apps |
-| Examples | MyFitnessPal — MyFitnessPal, Inc. (Francisco Partners).[8] Lose It! — FitNow, Inc.[9] Cronometer — Cronometer Software Inc.[10] |
-| Evidence the category exists | Apple lists the product as *MyFitnessPal: Calorie Counter App* in Health & Fitness.[8] MyFitnessPal's site answers "Is MyFitnessPal a free calorie tracker app?" with "If you're looking for a free calorie counter app, you're in the right place."[11] Capterra lists the same class as *Calorie Tracking Software*.[12] |
+| Field                        | Value                                                                                                                                                                                                                                                                                                                      |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Product category             | Calorie counter apps                                                                                                                                                                                                                                                                                                       |
+| Examples                     | MyFitnessPal — MyFitnessPal, Inc. (Francisco Partners).[8] Lose It! — FitNow, Inc.[9] Cronometer — Cronometer Software Inc.[10]                                                                                                                                                                                            |
+| Evidence the category exists | Apple lists the product as _MyFitnessPal: Calorie Counter App_ in Health & Fitness.[8] MyFitnessPal's site answers "Is MyFitnessPal a free calorie tracker app?" with "If you're looking for a free calorie counter app, you're in the right place."[11] Capterra lists the same class as _Calorie Tracking Software_.[12] |
 
 The Actor uses this category to look up a dish after they have already picked a venue. It logs food; it does not assemble a restaurant plate to a remaining target.
 
@@ -244,19 +268,17 @@ Walk in (or open the PDF menu), read item names and prices, and guess the macros
 
 ### 6. Positioning Analysis
 
-Customer evaluation criteria, scored 0–10. **Higher means the option offers more of that criterion. High is not "good."** Calorie counter apps are plotted as the median product in that category.
+Customer evaluation criteria, scored 0–10. Calorie counter apps are the median product in that category.
 
-| Criterion | What it means | Google Maps | Calorie counter apps | Manual method | Hungry Henry (future only) |
-| --- | --- | --- | --- | --- | --- |
-| Nutrition-goal filtering | How much the option uses the Actor's personal calorie/macro target as a filter | 1 | 7 | 3 | 9 |
-| Time to a decision | How much of the Actor's time the option consumes to reach a chosen meal. Higher = slower. | 7 | 8 | 9 | 2 |
-| Restaurant coverage | How many nearby venues the option can show | 10 | 6 | 3 | 10 |
-| Meal customization | How far the Actor can lock, swap, and rebuild a plate | 2 | 3 | 6 | 9 |
-| Price paid | How much money the option charges the Actor. Higher = more expensive. | 0 | 2 | 0 | 0 |
+| Criterion                | What it means                                                                             | Google Maps | Calorie counter apps | Manual method | Hungry Henry (future only) |
+| ------------------------ | ----------------------------------------------------------------------------------------- | ----------- | -------------------- | ------------- | -------------------------- |
+| Nutrition-goal filtering | How much the option uses the Actor's personal calorie/macro target as a filter            | 1           | 7                    | 3             | 9                          |
+| Time to a decision       | How much of the Actor's time the option consumes to reach a chosen meal. Higher = slower. | 7           | 8                    | 9             | 2                          |
+| Restaurant coverage      | How many nearby venues the option can show                                                | 10          | 6                    | 3             | 10                         |
+| Meal customization       | How far the Actor can lock, swap, and rebuild a plate                                     | 2           | 3                    | 6             | 9                          |
+| Price paid               | How much money the option charges the Actor. Higher = more expensive.                     | 0           | 2                    | 0             | 0                          |
 
 Scores are `assumption:` from the customer's point of view, not a survey.
-
-*Time to a decision* and *Price paid* are not "quality" axes. A high score means the option offers more time-cost or more price, which some Actors accept and this product will not.
 
 #### Current State Positioning Map
 
@@ -272,11 +294,11 @@ White space called out on the map:
 
 #### Future State Positioning Map
 
-The current-state map copied, with Hungry Henry plotted. White-space ovals are removed. No new evaluation criterion is added — the Actor already uses these five when they choose how to find a restaurant meal.
+The current-state map, with Hungry Henry plotted and the white-space ovals removed.
 
 ![Future-state positioning map — Hungry Henry on the positions to own](visuals/future-state-positioning-map.png)
 
-Hungry Henry is placed at 9 on nutrition-goal filtering, 2 on time to a decision, and 9 on meal customization. Those are the three white-space ovals from the current-state map. Restaurant coverage is **10, the same as Google Maps**, because Hungry Henry uses Google place data for distance, rating, and venue identity. Price paid stays 0, same as Maps and the manual method; that is not a position to differentiate on.
+Hungry Henry is placed at 9 on nutrition-goal filtering, 2 on time to a decision, and 9 on meal customization. Those are the three white-space ovals from the current-state map. Restaurant coverage is **10, the same as Google Maps**, because Hungry Henry uses Google place data for distance, rating, and venue identity. Price paid stays 0, same as Maps and the manual method.
 
 #### Position-to-Own
 
@@ -290,7 +312,7 @@ The first product owns two places on the future-state map: **high nutrition-goal
 
 **Market coverage strategy.** Differentiated. Go-to meal and tracking intensity change the product. An undifferentiated mass-market restaurant app would recreate Google Maps.
 
-**Market entry strategy.** First segment: **Dine-Out Regulars** (36.45 million) — largest go-to-meal segment, growing with sit-down recovery, and a low entry barrier because the Actor already opens Maps at the table.[1] First niche: **Macro-Tracking Dine-Out Regulars** (~9.1 million if the 25% tracker share is applied to the dine-out segment; `assumption:` independence) — they already pay for a calorie counter app, so nutrition-goal filtering is a criterion they use today, and they can be reached where they already log. First use case: **Dine-Out** — highest pain on the current-state journey. First problem: **Cheat-Meal Guilt Problem** — 3.2 billion blow-out or untracked restaurant meals per year in America. First position-to-own: high nutrition-goal filtering and low time to a decision. People outside this focus can still open the free consumer product; v1 design decisions are made for this group only.
+**Market entry strategy.** First segment: **Dine-Out Regulars** (36.45 million) — largest go-to-meal segment, growing with sit-down recovery, and a low entry barrier because the Actor already opens Maps at the table.[1] First niche: **Macro-Tracking Dine-Out Regulars** (~9.1 million if the 25% tracker share is applied to the dine-out segment; `assumption:` independence) — they already pay for a calorie counter app, so nutrition-goal filtering is a criterion they use today, and they can be reached where they already log. First use case: **Dine-Out** — highest pain on the current-state journey. First problem: **Cheat-Meal Guilt Problem** — 3.2 billion blow-out or untracked restaurant meals per year in America. First position-to-own: high nutrition-goal filtering and low time to a decision. v1 is designed for this group.
 
 **Market growth strategy.** TBA.
 
@@ -304,9 +326,10 @@ Hungry Henry v1.0 serves one market focus: the Dine-Out Regulars segment, the Ma
 
 **Purpose:** To find a restaurant meal.
 
-**Product Category:** Calorie Counter Apps. Existing category. Evidence: Apple lists *MyFitnessPal: Calorie Counter App* in Health & Fitness;[8] MyFitnessPal answers "Is MyFitnessPal a free calorie tracker app?" on its homepage;[11] Capterra lists the class as *Calorie Tracking Software*.[12] Hungry Henry is filed here because the Actor already opens this class to check a restaurant dish. Differentiation is inside the category: Henry builds the plate to the remaining target before the meal, rather than logging a dish after it.
+**Product Category:** Calorie Counter Apps. Existing category. Evidence: Apple lists _MyFitnessPal: Calorie Counter App_ in Health & Fitness;[8] MyFitnessPal answers "Is MyFitnessPal a free calorie tracker app?" on its homepage;[11] Capterra lists the class as _Calorie Tracking Software_.[12] Hungry Henry is filed here because the Actor already opens this class to check a restaurant dish. Differentiation is inside the category: Henry builds the plate to the remaining target before the meal, rather than logging a dish after it.
 
 **Main Attributes:**
+
 - **Search and Discovery** — generate a restaurant plate (one or more foods from one nearby restaurant) that meets, or is close enough to, the remaining energy / protein / carbs / fat target.
 - **Personalization** — lock a restaurant or a food; treat locked nutrition as constant and rebuild the rest of the plate.
 - **Location and Mapping** — show only restaurants that currently have a match, with Google rating and distance.
@@ -315,7 +338,7 @@ Hungry Henry v1.0 serves one market focus: the Dine-Out Regulars segment, the Ma
 - **Standard GenAI** — Ask Henry: a sentence becomes a plate.
 - **Collaboration and Sharing** — on the Match screen, a Share control sends the confirmed plate, so a finished meal can bring in the next person.
 
-These are the v1 capabilities. Search and Discovery, Personalization, and the macro math create the position-to-own: a goal filter and a short path to a chosen meal. Share sits on the finished Match. Save, collections, restaurant listing tiers, and delivery checkout are outside this outline.
+Search and Discovery, Personalization, and the macro math are the goal filter and the short path to a chosen meal. Share sits on the finished Match. Save, collections, restaurant listing tiers, and delivery checkout sit outside v1.
 
 **Software Deliverables:** iOS app
 
@@ -326,6 +349,7 @@ These are the v1 capabilities. Search and Discovery, Personalization, and the ma
 **Production Infrastructure:** public cloud
 
 **Product Data:**
+
 - **Sources** — Google Places (place identity, rating, distance); restaurant menus (titles, calories, allergens where posted); USDA FoodData Central (reference nutrient values when a menu line is incomplete).
 - **Completeness** — Places is sufficient for venue identity. Menus are often names and prices only; missing macros must be estimated or listed by the operator.
 - **Timeliness** — Places is a live lookup. Menus are static until the operator updates them or the ingest is refreshed. FoodData Central is updated on USDA's release cycle, not per order.
@@ -334,10 +358,10 @@ These are the v1 capabilities. Search and Discovery, Personalization, and the ma
 
 ### 2. User Views
 
-Happy path for the market-focus use case **Dine-Out**. Actor: Fitness Enthusiast. JTBD: to find a restaurant meal. Desired outcome: a confirmed plate in about 3 minutes that stays near the remaining target. One list. No login, account setup, or edge cases.
+Dine-Out. A confirmed plate in about 3 minutes, near the remaining target.
 
 1. **Start Hungry Henry on an iPhone.** The product opens on Filters, with energy, protein, carbs, and fat off.
-2. **Set the remaining target.** Turn energy on and choose *less* with a kcal value; turn protein on and choose *more* with a gram value; turn on one diet or allergy (for example pescatarian or shellfish). The product stores those targets and marks the rows on.
+2. **Set the remaining target.** Turn energy on and choose _less_ with a kcal value; turn protein on and choose _more_ with a gram value; turn on one diet or allergy (for example pescatarian or shellfish). The product stores those targets and marks the rows on.
 3. **Leave Filters for Home.** The product generates a plate from a nearby restaurant: restaurant name, Google stars, and distance at the top; a stacked list of foods (name, optional course, kcal and protein); a macro row for energy, protein, carbs, and fat with a hit or a plus/minus diff; diet or allergy pills under the macros. Large Forward and Match buttons sit under the plate.
 4. **Lock a food already wanted** (tap that food's title). The product marks the food locked, locks the restaurant with it, and keeps that item's nutrition constant.
 5. **Tap Forward.** The product bumps unlocked foods out and new foods in, one by one. The locked food stays. The macro row updates against the same target.
@@ -347,28 +371,26 @@ Entry point: open the iOS app after deciding to eat a restaurant meal. Completio
 
 ### 3. Functional Requirements
 
-Happy-path features from the outline, the sequential list, and the prototype. Actor: Fitness Enthusiast.
-
-| No. | Feature | Requirement |
-| --- | --- | --- |
-| 1 | Remaining energy target | As a Fitness Enthusiast, I want to set energy to less, is, or more of a kcal value so that each plate is judged against the energy I have left. |
-| 2 | Remaining protein target | As a Fitness Enthusiast, I want to set protein to less, is, or more of a gram value so that each plate is judged against the protein I still want. |
-| 3 | Remaining carb target | As a Fitness Enthusiast, I want to set carbs to less, is, or more of a gram value so that each plate is judged against the carbs I have left. |
-| 4 | Remaining fat target | As a Fitness Enthusiast, I want to set fat to less, is, or more of a gram value so that each plate is judged against the fat I have left. |
-| 5 | Diet constraint | As a Fitness Enthusiast, I want to turn on a diet so that plates exclude foods that break that diet. |
-| 6 | Allergy constraint | As a Fitness Enthusiast, I want to turn on an allergy so that a plate that contains that allergen is not presented as a match. |
-| 7 | Search and Discovery | As a Fitness Enthusiast, I want a plate generated from one nearby restaurant so that I can see a meal that meets, or is close enough to, my remaining targets. |
-| 8 | Location and Mapping | As a Fitness Enthusiast, I want the plate to name the restaurant so that I know where the meal is. |
-| 9 | Location and Mapping | As a Fitness Enthusiast, I want the plate to show the restaurant's star rating so that I can judge the venue before I match. |
-| 10 | Location and Proximity | As a Fitness Enthusiast, I want the plate to show distance from me so that I know how far the restaurant is. |
-| 11 | Food stack | As a Fitness Enthusiast, I want each food on the plate named with its energy and protein so that I can see what I would eat. |
-| 12 | Advanced Math Computations | As a Fitness Enthusiast, I want the plate compared to my remaining energy, protein, carbs, and fat so that I can see a hit or a plus/minus before I match. |
-| 13 | Personalization | As a Fitness Enthusiast, I want to lock a food on the plate so that later plates keep that food. |
-| 14 | Personalization | As a Fitness Enthusiast, I want the restaurant locked when I lock a food so that later plates stay at that restaurant. |
-| 15 | Forward | As a Fitness Enthusiast, I want unlocked foods replaced with different foods from the same restaurant so that I can try another combination against the same remaining target. |
-| 16 | Match | As a Fitness Enthusiast, I want to confirm the plate I will eat so that the search ends on a chosen meal. |
-| 17 | Collaboration and Sharing | As a Fitness Enthusiast, I want the confirmed plate sent to another person so that they can see the meal I will eat. |
-| 18 | Standard GenAI | As a Fitness Enthusiast, I want a sentence I type turned into a plate so that I can skip reading posted menus. |
+| No. | Feature                    | Requirement                                                                                                                                                                    |
+| --- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1   | Remaining energy target    | As a Fitness Enthusiast, I want to set energy to less, is, or more of a kcal value so that each plate is judged against the energy I have left.                                |
+| 2   | Remaining protein target   | As a Fitness Enthusiast, I want to set protein to less, is, or more of a gram value so that each plate is judged against the protein I still want.                             |
+| 3   | Remaining carb target      | As a Fitness Enthusiast, I want to set carbs to less, is, or more of a gram value so that each plate is judged against the carbs I have left.                                  |
+| 4   | Remaining fat target       | As a Fitness Enthusiast, I want to set fat to less, is, or more of a gram value so that each plate is judged against the fat I have left.                                      |
+| 5   | Diet constraint            | As a Fitness Enthusiast, I want to turn on a diet so that plates exclude foods that break that diet.                                                                           |
+| 6   | Allergy constraint         | As a Fitness Enthusiast, I want to turn on an allergy so that a plate that contains that allergen is not presented as a match.                                                 |
+| 7   | Search and Discovery       | As a Fitness Enthusiast, I want a plate generated from one nearby restaurant so that I can see a meal that meets, or is close enough to, my remaining targets.                 |
+| 8   | Location and Mapping       | As a Fitness Enthusiast, I want the plate to name the restaurant so that I know where the meal is.                                                                             |
+| 9   | Location and Mapping       | As a Fitness Enthusiast, I want the plate to show the restaurant's star rating so that I can judge the venue before I match.                                                   |
+| 10  | Location and Proximity     | As a Fitness Enthusiast, I want the plate to show distance from me so that I know how far the restaurant is.                                                                   |
+| 11  | Food stack                 | As a Fitness Enthusiast, I want each food on the plate named with its energy and protein so that I can see what I would eat.                                                   |
+| 12  | Advanced Math Computations | As a Fitness Enthusiast, I want the plate compared to my remaining energy, protein, carbs, and fat so that I can see a hit or a plus/minus before I match.                     |
+| 13  | Personalization            | As a Fitness Enthusiast, I want to lock a food on the plate so that later plates keep that food.                                                                               |
+| 14  | Personalization            | As a Fitness Enthusiast, I want the restaurant locked when I lock a food so that later plates stay at that restaurant.                                                         |
+| 15  | Forward                    | As a Fitness Enthusiast, I want unlocked foods replaced with different foods from the same restaurant so that I can try another combination against the same remaining target. |
+| 16  | Match                      | As a Fitness Enthusiast, I want to confirm the plate I will eat so that the search ends on a chosen meal.                                                                      |
+| 17  | Collaboration and Sharing  | As a Fitness Enthusiast, I want the confirmed plate sent to another person so that they can see the meal I will eat.                                                           |
+| 18  | Standard GenAI             | As a Fitness Enthusiast, I want a sentence I type turned into a plate so that I can skip reading posted menus.                                                                 |
 
 ### 4. Context View
 
@@ -376,54 +398,169 @@ Happy-path features from the outline, the sequential list, and the prototype. Ac
 
 ### 5. Non-Functional Requirements
 
-| No. | Kind | Requirement | Feature |
-| --- | --- | --- | --- |
-| 1 | Latency | When Hungry Henry opens on the happy path, latency shall be ultra-low (less than 2 ms) so that the first screen feels instantaneous. | Remaining-target filters |
-| 2 | Latency | When initial options are returned after a search, latency shall not exceed medium (200 ms to 1 second). | Search and Discovery |
-| 3 | Latency | When new meal options are presented, latency shall be low (2 to 200 ms) so that the next plate feels instantaneous. | Forward |
-| 4 | Usability | Hungry Henry shall enable a first-time Fitness Enthusiast to confirm a plate within 3 minutes without prior instruction. | Match |
-| 5 | Availability | The product shall be available 99.9% of the year. | |
-| 6 | Compatibility | The iOS app shall operate on iPhone running the current iOS release and the two previous major releases (N-2). | |
-| 7 | Security | The product shall enforce a medium-level of security to minimize risk from organized hacker groups. | |
-| 8 | Privacy | The product shall have a medium-level of data privacy as it contains PII (location, remaining targets, diet, allergy) that may fall under CCPA/CPRA or similar state privacy laws and does not contain actionable financial information. | |
-| 9 | Accuracy | When a menu line posts energy, the plate shall display that posted kcal value for 100% of such lines. | Advanced Math Computations |
-| 10 | Accuracy | When energy is taken from USDA FoodData Central, the plate shall mark the value as estimated. | Advanced Math Computations |
-| 11 | Safety | The product will operate in situations where failures could lead to injuries or moderate environmental damage. | Allergy constraint |
-| 12 | Safety | When a menu line posts an allergen, the plate shall display that allergen. | Allergy constraint |
-| 13 | Interoperability | Hungry Henry shall get place identity, rating, and distance from Google Places. | Location and Mapping |
-| 14 | Interoperability | Hungry Henry shall get item titles, posted calories, and posted allergens from restaurant websites. | Search and Discovery |
-| 15 | Interoperability | Hungry Henry shall get reference nutrient values from USDA FoodData Central when a menu line is incomplete. | Advanced Math Computations |
+| No. | Kind             | Requirement                                                                                                                                                                                                                              | Feature                    |
+| --- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| 1   | Latency          | When Hungry Henry opens on the happy path, latency shall be ultra-low (less than 2 ms) so that the first screen feels instantaneous.                                                                                                     | Remaining-target filters   |
+| 2   | Latency          | When initial options are returned after a search, latency shall not exceed medium (200 ms to 1 second).                                                                                                                                  | Search and Discovery       |
+| 3   | Latency          | When new meal options are presented, latency shall be low (2 to 200 ms) so that the next plate feels instantaneous.                                                                                                                      | Forward                    |
+| 4   | Usability        | Hungry Henry shall enable a first-time Fitness Enthusiast to confirm a plate within 3 minutes without prior instruction.                                                                                                                 | Match                      |
+| 5   | Availability     | The product shall be available 99.9% of the year.                                                                                                                                                                                        |                            |
+| 6   | Compatibility    | The iOS app shall operate on iPhone running the current iOS release and the two previous major releases (N-2).                                                                                                                           |                            |
+| 7   | Security         | The product shall enforce a medium-level of security to minimize risk from organized hacker groups.                                                                                                                                      |                            |
+| 8   | Privacy          | The product shall have a medium-level of data privacy as it contains PII (location, remaining targets, diet, allergy) that may fall under CCPA/CPRA or similar state privacy laws and does not contain actionable financial information. |                            |
+| 9   | Accuracy         | When a menu line posts energy, the plate shall display that posted kcal value for 100% of such lines.                                                                                                                                    | Advanced Math Computations |
+| 10  | Accuracy         | When energy is taken from USDA FoodData Central, the plate shall mark the value as estimated.                                                                                                                                            | Advanced Math Computations |
+| 11  | Safety           | The product will operate in situations where failures could lead to injuries or moderate environmental damage.                                                                                                                           | Allergy constraint         |
+| 12  | Safety           | When a menu line posts an allergen, the plate shall display that allergen.                                                                                                                                                               | Allergy constraint         |
+| 13  | Interoperability | Hungry Henry shall get place identity, rating, and distance from Google Places.                                                                                                                                                          | Location and Mapping       |
+| 14  | Interoperability | Hungry Henry shall get item titles, posted calories, and posted allergens from restaurant websites.                                                                                                                                      | Search and Discovery       |
+| 15  | Interoperability | Hungry Henry shall get reference nutrient values from USDA FoodData Central when a menu line is incomplete.                                                                                                                              | Advanced Math Computations |
 
 ## 4. Customer Value Space
 
 ### 1. Product Features and Benefits
 
-Benefits are relative to the current state (Google Maps and posted menus). The quantified time benefit is the outcome gap already sized in Problem Sizing.
+Benefits against Google Maps and a posted menu.
 
-| Feature | Benefit(s) |
-| --- | --- |
-| Remaining-target filters | Faster restaurant-meal search: Ave. Meal Search Time from 23 minutes to 3 minutes, which is 20 minutes saved per occasion.[1] |
-| Diet and allergy filters | Fewer off-plan plates than guessing a diet or allergen from a posted menu that often omits that information. |
-| Search and Discovery | A nearby plate that meets remaining targets, instead of a venue list ranked on rating, distance, cuisine, and price. |
-| Personalization | A locked food stays while the rest of the plate rebuilds, so a picky plate does not restart the 23-minute hunt. |
-| Location and Mapping | Only restaurants that currently have a match, so the Fitness Enthusiast does not inspect venues that cannot fit. |
-| Location and Proximity | Distance sits on the plate, so they do not leave the table to open Maps. |
-| Food stack | The foods to eat are visible as a plate, instead of a PDF list of names. |
-| Advanced Math Computations | Lower cheat-meal calorie scatter: Ave. Cheat-Meal Calorie SD from 500 kcal to 150 kcal, because the plus/minus is on the plate (`assumption:`). |
-| Forward | Another combination in one step, instead of rebuilding the plate by hand on the restaurant site. |
-| Match | A confirmed meal ends the search, instead of walking away still unsure. |
-| Standard GenAI | A sentence becomes a plate, so they skip scanning posted menus. |
-| Collaboration and Sharing | The finished plate can go to another person, instead of screenshotting a tracker. |
+| Feature                      | Benefit(s)                                                                                                                                                                                                                       |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Remaining-target filters     | Faster restaurant-meal search: Ave. Meal Search Time from 23 minutes to 3 minutes, which is 20 minutes saved per occasion.[1]                                                                                                    |
+| Diet and allergy filters     | Fewer off-plan plates than guessing a diet or allergen from a posted menu that often omits that information.                                                                                                                     |
+| Search and Discovery         | A nearby plate that meets remaining targets, instead of a venue list ranked on rating, distance, cuisine, and price.                                                                                                             |
+| Personalization              | A locked food stays while the rest of the plate rebuilds, so a picky plate does not restart the 23-minute hunt.                                                                                                                  |
+| Location and Mapping         | Only restaurants that currently have a match, so the Fitness Enthusiast does not inspect venues that cannot fit.                                                                                                                 |
+| Location and Proximity       | Distance sits on the plate, so they do not leave the table to open Maps.                                                                                                                                                         |
+| Food stack                   | The foods to eat are visible as a plate, instead of a PDF list of names.                                                                                                                                                         |
+| Advanced Math Computations   | Lower cheat-meal calorie scatter: Ave. Cheat-Meal Calorie SD from 500 kcal to 150 kcal, because the plus/minus is on the plate (`assumption:`).                                                                                  |
+| Forward                      | Another combination in one step, instead of rebuilding the plate by hand on the restaurant site.                                                                                                                                 |
+| Match                        | A confirmed meal ends the search, instead of walking away still unsure.                                                                                                                                                          |
+| Standard GenAI               | Ask Henry turns a sentence into a plate. Free is rate limited. Paid is unlimited, so the Fitness Enthusiast can keep asking until the plate fits.                                                                                |
+| Collaboration and Sharing    | The finished plate can go to another person, instead of screenshotting a tracker.                                                                                                                                                |
+| Hungry Henry recommendations | The next plate is curated from meals the Fitness Enthusiast has already liked, so a picky plate does not start over. One Hungry Henry Match is gifted on the paid plan and may include a discount at a participating restaurant. |
 
 ### 2. Pricing Model
 
-TBA
+Restaurants pay to be seen. That price is not set here.
+
+**Price-setting strategy.** Segmented. Free is the anchor. Paid is the core offer, for a Fitness Enthusiast who wants Henry's recommendations, micronutrient targets, and Ask Henry without a cap. No third tier.
+
+| Tier              | Who it is for                                      | Bundle                                                                                                                                                                                     | Price           | Metric     |
+| ----------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- | ---------- |
+| Free (anchor)     | Every macro is enough to find the meal.            | Unlimited swipes and the rest of the app. Filters: energy, protein, carbohydrates, and fat, each as is, less, or more. Diet and allergy. Ask Henry is rate limited.                        | $0              | per member |
+| Paid (core offer) | Wants recommendations and Ask Henry without a cap. | Everything in Free. Micronutrient targets. Recommendations curated from liked meals, including one gifted Hungry Henry Match that may carry a restaurant discount. Ask Henry is unlimited. | $14.40 per year | per member |
+
+**Pricing metric.** One Fitness Enthusiast's access for a year.
+
+**Price.** Free is $0 per member. Energy, protein, carbohydrates, and fat are enough to find a meal, so a fee should not sit on that job. Ask Henry on Free is rate limited. The cap is not numbered here.
+
+The 20 minutes saved against today's search sit on Free, because those four macros are on Free.
+
+`20 / 60 × 72 × $20 = $480 per year` (`assumption:` $20 per hour)
+
+Paid is $14.40 per member per year, one-tenth of the value of the paid extras. Those extras are recommendations from meals already liked, micronutrient targets, and Ask Henry without a cap. They are not a second claim on the 20 minutes (`assumption:` the extras are worth 6 minutes per meal).
+
+`6 / 60 × 72 × $20 = $144 per year` (`assumption:` $20 per hour)
+
+`0.10 × $144 = $14.40 per member per year`
+
+Google Maps, how the meal is found today, costs $0, so this job has no paid reference price.[7]
+
+**Recommendations.** Henry curates plates from meals the Fitness Enthusiast has already liked, at restaurants nearby, inside the target still left. That is a paid difference the free macros do not make on their own. One of those plates is gifted as a Hungry Henry Match. A participating restaurant may discount it. No discount amount is set, so the discount is not inside the $14.40. It lowers the restaurant bill for that plate. The third paid difference is Ask Henry with no rate limit, so the same curation can be asked for until the plate is right.
+
+**Payment structure.** Free has no charge. Paid is once per year, at the start, charged to the Fitness Enthusiast by card or the app store.
 
 ### 3. Customer Cost Items
 
-TBA
+**Acquiring.** Paid is $14.40 per member per year. Free is $0. No shipping. No new phone (`assumption:` the iPhone is already owned).
+
+**Using.** Setting the macro filters takes 10 minutes once: `10 / 60 × $20 = $3.33` in the first year (`assumption:`). That setup is on Free, because the macros are on Free.
+
+**Having.** The $14.40 recurs each year and includes the recommendations, micronutrient targets, and unlimited Ask Henry. Stopping payment returns the account to Free: every macro, and the rate limit. Location, nutrition targets, and meals liked stay on the account. That privacy cost has no dollar figure. No accessory and no second app are required.
+
+**Disposing.** Cancel before renewal. No cancellation fee. Delete the app. No disposal charge.
 
 ### 4. Customer Value Proposition Evaluation
+
+On Free, the time benefit is the 20 minutes already sized, $480 a year, against a one-time setup of $3.33. Recommendations, micronutrient targets, and unlimited Ask Henry are the paid extras, assumed worth $144 a year, against the $14.40 fee. Other benefits in the features table stand: cheat-meal scatter from 500 kcal to 150 kcal, and a plan finished 75 percent of the time rather than 30 percent. Only the time figures are summed in money. No discount amount is set, so a discount is not in either ratio. It would raise the paid one.
+
+First-year Free cost is the setup. Paid cost is the fee. The setup is not charged again on Paid.
+
+`$480 / $3.33 = 144.1`
+
+`$144 / $14.40 = 10`
+
+Free is 144.1:1 against today's 23-minute search. Paid is 10:1 for the extras. Both are a small amount of money, a decision in minutes, and an easy stop: delete the app, or do not renew. Low friction is compelling at about 3:1, so both offers are compelling. Free remains the right plan when the match, and a rate limit, are enough.
+
+## 5. Product Strategy Space
+
+### 1. Product Goals
+
+By the end of year 3, Hungry Henry reaches 1% of Macro-Tracking Dine-Out Regulars: 9,112,500 Fitness Enthusiasts (`assumption:` dine-out share independent of the 25% daily-log share).[2] That niche is a Major segment. The class benchmark at three years is 0.2% to 1% (17-629, Class 1).[14] The high end is used because switching cost is low (Free is $0, and Paid ends if it is not renewed), the price is low ($0 or $14.40), and no current option filters a restaurant search by a personal target. The 1% point is `assumption:`.
+
+`EOY 3 total users = 0.01 × 9,112,500 = 91,125`
+
+Growth is constant progression: the same number of new users arrives each year. In v1, one person's match does not get better because more people have joined.
+
+`EOY 1 total users = 91,125 / 3 = 30,375`
+
+`EOY 2 total users = 2 × 91,125 / 3 = 60,750`
+
+`EOY 3 total users = 91,125`
+
+One membership is one Fitness Enthusiast. A unit sold is one Paid membership for a year. Free memberships are users and are not units sold.
+
+Free Ask Henry costs money to run. The class band for that kind of product is 10 to 30 free users per paying user (17-629, Class 1).[14] Free already finishes the job, because every macro is on Free, so the ratio is 30:1 (`assumption:`).
+
+`Paid users = total users / 31`
+
+`Free users = total users − paid users`
+
+`EOY 1 paid = round(30,375 / 31) = 980`; free = 30,375 − 980 = 29,395
+
+`EOY 2 paid = round(60,750 / 31) = 1,960`; free = 60,750 − 1,960 = 58,790
+
+`EOY 3 paid = round(91,125 / 31) = 2,940`; free = 91,125 − 2,940 = 88,185
+
+|                | EOY 1  | EOY 2  | EOY 3  |
+| -------------- | ------ | ------ | ------ |
+| No. paid users | 980    | 1,960  | 2,940  |
+| No. free users | 29,395 | 58,790 | 88,185 |
+| Total users    | 30,375 | 60,750 | 91,125 |
+| No. units sold | 980    | 1,960  | 2,940  |
+
+Units sold equal paid users.
+
+### 2. Product Vision
+
+Hungry Henry will make dieting fun, flexible, and achievable. Ten years from now a Fitness Enthusiast wants the carbonara at the local Italian, the late delivery, or Tuesday night at their own stove, and they get it — delicious, satisfying, and still on the goal — because the meal was built for their taste and for whatever the day has left. Hitting that target is the win. The game sits at the heart of the experience, and the people they eat with are how the win travels.
+
+That starts with Macro-Tracking Dine-Out Regulars, the people already logging and already going out. From that table the scope opens into new verticals: delivery, takeout, and the home kitchen, gym membership or not.
+
+Hungry Henry will couple their taste with the day and hand them a specially crafted meal that fits: the plate to order, the bag at the door, or the recipe to cook. Those suggestions come from models that couple the nutrition science, a lifetime of their palate, and what is in season at the great local restaurants. What begins as an iPhone app becomes an end-to-end platform. A wearable sets the day, social ties carry the meal, and Ask Henry plans across the menu, the delivery, and the kitchen.
+
+#### Product Vision Summary
+
+#### 1. Customer Future
+
+A Fitness Enthusiast meets the nutrition target on a restaurant meal, a delivery, or a home-cooked meal, and the meal is one they want. Hitting the target is rewarded through streaks and achievements, and they can share their wins and finds socially.
+
+#### 2. Market Future
+
+Hungry Henry targets more verticals. After Macro-Tracking Dine-Out Regulars, it targets delivery, takeout, and home cooking, including Fitness Enthusiasts without a gym membership. Restaurants become a second market, paying to have their meals matched.
+
+#### 3. Product Future
+
+Scope expands to more jobs than finding a restaurant meal: finding a delivery that fits, choosing takeout that meets the target, deciding what to cook, and planning the day across all three.
+
+#### 4. Technology Future
+
+AI models improve search by combining nutrition science, lifetime taste, what is in season, and local restaurants. The iPhone app becomes a platform that takes the day's target from wearables. A social layer lets a Fitness Enthusiast share favorite meals, adding network and viral effects for both B2C and B2B. Usage data from that platform supports more paid tiers above the $14.40 plan and a clearer Free-to-Paid path.
+
+## 6. Go To Market Space
+
+TBA
+
+## 7. Product Financials Space
 
 TBA
 
@@ -434,16 +571,17 @@ TBA
 1. US Foods, "New Survey Reveals Menu and Ordering Choices of Americans" — Americans spend 14 minutes selecting a restaurant and 9 minutes deciding what to order once seated; about 5 preferred dine-in occasions and 3 takeout/delivery occasions per month; 55% vs 45% dine-out vs takeout/delivery preference. https://www.usfoods.com/tools-tips-and-ideas/articles-and-publications/articles/american-menu-choices
 2. Health & Fitness Association, "81 Million Americans Were Members of a Fitness Facility in 2025" — 81 million members, +5.2% versus 2024; more than 100 million total users. https://www.healthandfitness.org/81-million-americans-were-members-of-a-fitness-facility-in-2025-new-hfa-report-finds/
 3. Health & Fitness Association / PR Newswire, "One in Four Americans Belonged to a Gym in 2024" — 77 million members in 2024; +20% membership from 2019 to 2024. https://www.healthandfitness.org/one-in-four-americans-belonged-to-a-gym-in-2024/
-4. TouchBistro, *2024 American Diner Trends Report* — 39% of Americans dine out weekly or more; 43% order takeout or delivery weekly or more. https://www.touchbistro.com/wp-content/uploads/2022/09/American_Diner_Report_2024_Final.pdf
-5. Finlayson, G. et al., "Retention rates and weight loss in a commercial weight loss program," *International Journal of Obesity* — 6.6% retained at 52 weeks (annual program context; weekly completion uses [6]). https://www.nature.com/articles/0803395
-6. Helander, E. E., Vuorinen, A.-L., Wansink, B., and Korhonen, I. K. J., "How long do people stick to a diet resolution? A digital epidemiological estimation of weight loss diet persistence," *Public Health Nutrition* (2020) — new January dieters persist about 3.1–5.3 weeks. https://pmc.ncbi.nlm.nih.gov/articles/PMC10200480/
+4. TouchBistro, _2024 American Diner Trends Report_ — 39% of Americans dine out weekly or more; 43% order takeout or delivery weekly or more. https://www.touchbistro.com/wp-content/uploads/2022/09/American_Diner_Report_2024_Final.pdf
+5. Finlayson, G. et al., "Retention rates and weight loss in a commercial weight loss program," _International Journal of Obesity_ — 6.6% retained at 52 weeks (annual program context; weekly completion uses [6]). https://www.nature.com/articles/0803395
+6. Helander, E. E., Vuorinen, A.-L., Wansink, B., and Korhonen, I. K. J., "How long do people stick to a diet resolution? A digital epidemiological estimation of weight loss diet persistence," _Public Health Nutrition_ (2020) — new January dieters persist about 3.1–5.3 weeks. https://pmc.ncbi.nlm.nih.gov/articles/PMC10200480/
 7. Google, "Ask Maps and Immersive Navigation: New AI features in Google Maps" — Ask Maps conversational discovery on Google Maps. https://blog.google/products-and-platforms/products/maps/ask-maps-immersive-navigation/
-8. Apple App Store, *MyFitnessPal: Calorie Counter App* — listed in Health & Fitness as a calorie counter. https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718
-9. Apple App Store, *Lose It! – Calorie Counter* — FitNow, Inc. https://apps.apple.com/us/app/lose-it-calorie-counter/id297368629
-10. Apple App Store, *Cronometer: Nutrition Tracker* — Cronometer Software Inc. https://apps.apple.com/us/app/cronometer-nutrition-tracker/id1145935738
+8. Apple App Store, _MyFitnessPal: Calorie Counter App_ — listed in Health & Fitness as a calorie counter. https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718
+9. Apple App Store, _Lose It! – Calorie Counter_ — FitNow, Inc. https://apps.apple.com/us/app/lose-it-calorie-counter/id297368629
+10. Apple App Store, _Cronometer: Nutrition Tracker_ — Cronometer Software Inc. https://apps.apple.com/us/app/cronometer-nutrition-tracker/id1145935738
 11. MyFitnessPal, homepage — "If you're looking for a free calorie counter app, you're in the right place." https://www.myfitnesspal.com/
-12. Capterra, *Calorie Tracking Software* — product-category listing that names this class of tools. https://www.capterra.com/calorie-tracking-software/
+12. Capterra, _Calorie Tracking Software_ — product-category listing that names this class of tools. https://www.capterra.com/calorie-tracking-software/
 13. Client pitch, Hungry Henry notes — "55% of them are guilty the next day because they're trying to lose weight." Used as the share of restaurant occasions that are a blow-out or untracked meal.
+14. 17-629 Product Management Essentials II, Class 1 — 3-year market-share bands by the size of the target segment, and free-to-paid ratio bands. Shared in class. The 1% share and the 30:1 ratio are the points chosen inside those bands (`assumption:`).
 
 ### Five Whys (Cheat-Meal Guilt Problem)
 
@@ -473,6 +611,33 @@ Blow-out or untracked meals (Cheat-Meal Guilt Problem)
   America / year = 39.6 × 81,000,000 = 3,207,600,000 meals
 ```
 
+### Pricing, cost, and TAM math
+
+```
+Free time value = 20 / 60 × 72 × $20 = $480 per year
+  (`assumption:` $20 per hour; every macro is on Free)
+Paid extras = 6 / 60 × 72 × $20 = $144 per year
+  (`assumption:` 6 minutes per meal, not a slice of the 23-to-3 gap)
+Paid price = 0.10 × $144 = $14.40 per member per year
+Setup = 10 / 60 × $20 = $3.33 in year 1    (`assumption:` 10 minutes once)
+Free ratio = $480 / $3.33 = 144.1
+Paid ratio = $144 / $14.40 = 10
+
+TAM (revenue) = 81,000,000 × $14.40 × 1 = $1,166,400,000 per year
+TAM (units) = 81,000,000 × 1 = 81,000,000 memberships per year
+  (Everyone in the named market buys Paid.
+   Restaurant visibility fees are excluded.)
+
+EOY 3 users = 0.01 × 9,112,500 = 91,125
+  (Major band, high end, 17-629 Class 1.[14] 1% is assumption:)
+EOY 1 = 91,125 / 3 = 30,375
+EOY 2 = 2 × 91,125 / 3 = 60,750
+Paid = round(total / 31); Free = total − paid     (30:1, assumption:)
+EOY 1 units sold = 980
+EOY 2 units sold = 1,960
+EOY 3 units sold = 2,940
+```
+
 ### Competitor scores (0–10)
 
 See the table in §2.6. All scores are `assumption:`.
@@ -483,7 +648,7 @@ The fertile land is Restaurants. The Actor and JTBD are taken from the client's 
 
 ### Prototyping Input Sheet
 
-Initial sheet, copied from the body before any prototype concept is generated. One software deliverable. This wording is not updated when later concepts change an input.
+Initial sheet, from the body, before any prototype. One software deliverable.
 
 **Problem**
 
@@ -524,7 +689,7 @@ Initial sheet, copied from the body before any prototype concept is generated. O
 **Sequential list (task flow):**
 
 1. Start Hungry Henry on an iPhone. The product opens on Filters, with energy, protein, carbs, and fat off.
-2. Set the remaining target. Turn energy on and choose *less* with a kcal value; turn protein on and choose *more* with a gram value; turn on one diet or allergy (for example pescatarian or shellfish). The product stores those targets and marks the rows on.
+2. Set the remaining target. Turn energy on and choose _less_ with a kcal value; turn protein on and choose _more_ with a gram value; turn on one diet or allergy (for example pescatarian or shellfish). The product stores those targets and marks the rows on.
 3. Leave Filters for Home. The product generates a plate from a nearby restaurant: restaurant name, Google stars, and distance at the top; a stacked list of foods (name, optional course, kcal and protein); a macro row for energy, protein, carbs, and fat with a hit or a plus/minus diff; diet or allergy pills under the macros.
 4. Lock a food already wanted (tap that food's title). The product marks the food locked, locks the restaurant with it, and keeps that item's nutrition constant.
 5. Tap Forward. The product bumps unlocked foods out and new foods in, one by one. The locked food stays. The macro row updates against the same target.
@@ -532,7 +697,7 @@ Initial sheet, copied from the body before any prototype concept is generated. O
 
 ### Prototyping Analysis
 
-Three concepts, each generated in the same AI prototyping tool and compared with the input sheet that produced it. Concept 2 and Concept 3 each change one item on that sheet. The two changes are different kinds. The initial Prototyping Input Sheet above is unchanged.
+Three concepts from the same tool, each compared with the sheet that produced it. Concept 2 and Concept 3 each change one item, and the two changes are different kinds.
 
 **1. Prototype Concept No. 1**
 
@@ -564,7 +729,7 @@ Which ONE of the following did you change in your Prototyping Input Sheet to pro
 State the change that you made.
 
 The happy path on Home was rewritten so the next action is a large button. Forward and Match sit on the plate as the required steps. This is the direct response to Concept 1, where those steps were buried under the plate.
-  
+
 What was missing in the AI-generated prototype concept?
 
 A single gesture for the food. The new buttons did show Forward and Match, so that part of the updated sheet landed. Beside them, the model still offered a restaurant swiper. The sequential list moves one unlocked food at a time and keeps a locked food put. A second gesture that changes the restaurant hid that step.
@@ -625,4 +790,3 @@ Did this prototyping process help you to create a better final prototype? Why or
 Yes. Concept 1 showed that a complete Home is not a clear path, and it showed two features to drop. Concept 2 showed that larger buttons are not enough while a restaurant swiper and a heavy theme remain. Concept 3 showed that the Match screen is the right ending, and that Share belongs on it as the way a finished meal spreads. The final prototype is those three corrections on the original happy path.
 
 **Final prototype file (PDF or video):**
-
