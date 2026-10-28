@@ -130,6 +130,9 @@ config:
     - Pro Silver
     - Pro Gold
   mvp_focus: Fitness Enthusiasts finding a meal
+  requirements_workbook_title: "Requirements Workbook"
+  requirements_workbook_basename: hungry-henry-requirements-workbook
+  requirements_workbook_version: "0.2"
 ---
 
 # Hungry Henry — brief
