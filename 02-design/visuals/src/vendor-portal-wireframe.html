@@ -1,0 +1,79 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;background:#fff}
+  *{box-sizing:border-box}
+  .page{width:1400px;height:740px;padding:28px 36px;font-family:"Segoe UI",Inter,Arial,sans-serif;color:#503047;position:relative}
+  .browser{border:3px solid #503047;border-radius:14px;height:540px;overflow:hidden;position:relative}
+  .bar{height:40px;background:#503047;display:flex;align-items:center;gap:8px;padding:0 14px}
+  .bar i{width:12px;height:12px;border-radius:50%;background:#c9a9c0;display:block}
+  .bar .url{margin-left:18px;background:#7a5a71;color:#fff;font-size:13px;border-radius:12px;padding:3px 14px;width:420px}
+  .head{height:64px;border-bottom:2px solid #ead9e4;display:flex;align-items:center;padding:0 24px;gap:16px}
+  .logo{font-weight:700;font-size:20px;color:#B43B1F}
+  .venue{font-family:Georgia,serif;font-size:20px;margin-left:auto}
+  .body{display:flex;height:436px}
+  .nav{width:190px;border-right:2px solid #ead9e4;padding:22px 16px;font-size:16px}
+  .nav div{padding:9px 12px;border-radius:8px;margin-bottom:6px}
+  .nav .on{background:#D0E3C4;font-weight:600}
+  .main{flex:1;padding:22px 26px;position:relative}
+  h2{margin:0 0 14px;font-size:24px}
+  .tools{display:flex;gap:12px;align-items:center;margin-bottom:16px}
+  .btn{background:#B43B1F;color:#fff;border-radius:18px;padding:7px 18px;font-weight:600;font-size:15px}
+  .field{border:2px solid #c9a9c0;border-radius:8px;padding:6px 12px;width:340px;font-size:14px;color:#9C7A92}
+  .ghost{border:2px solid #503047;border-radius:18px;padding:5px 16px;font-weight:600;font-size:15px}
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  th{text-align:left;border-bottom:2px solid #503047;padding:8px 6px;font-weight:600}
+  td{border-bottom:1px solid #ead9e4;padding:9px 6px;white-space:nowrap}
+  .tag{border-radius:10px;padding:2px 9px;font-size:12px;font-weight:600}
+  .posted{background:#D0E3C4}
+  .est{background:#FFD7CD}
+  .side{width:300px;border-left:2px solid #ead9e4;padding:22px 18px}
+  .tier{border:2px solid #c9a9c0;border-radius:10px;padding:10px 12px;margin-bottom:10px;font-size:15px}
+  .tier.cur{border-color:#B43B1F;background:#FFF2EE}
+  .tier small{display:block;color:#7a5a71;font-size:12px}
+  .badge{display:inline-flex;vertical-align:middle;margin-left:6px;width:24px;height:24px;border-radius:50%;background:#503047;color:#fff;font-weight:700;font-size:15px;align-items:center;justify-content:center;flex:none}
+  .key{display:grid;grid-template-columns:repeat(4,1fr);gap:10px 22px;margin-top:20px;font-size:15px}
+  .key div{display:flex;gap:10px;align-items:flex-start}
+  .key b{min-width:26px;height:26px;border-radius:50%;background:#503047;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px}
+  .key span em{font-style:normal;color:#50663C;font-weight:600;display:block}
+  .note{position:absolute;right:36px;top:30px;font-size:12px;color:#9C7A92}
+</style></head><body>
+<div class="page">
+  <div class="browser">
+    <div class="bar"><i></i><i></i><i></i><div class="url">vendor portal · desktop browser</div></div>
+    <div class="head"><div class="logo">Hungry Henry for Restaurants</div><div class="venue">Sotto Mare</div></div>
+    <div class="body">
+      <div class="nav"><div class="on">Menu</div><div>Visibility</div><div>Insights</div><div>Account</div></div>
+      <div class="main">
+        <h2>Menu</h2>
+        <div class="tools"><div class="btn">+ Add item</div><span class="badge">1</span><div class="field">Menu web page or PDF</div><div class="ghost">Import</div><span class="badge">4</span></div>
+        <table>
+          <tr><th>Item</th><th>Course</th><th>kcal</th><th>Protein</th><th>Carbs</th><th>Fat</th><th>Allergens</th><th>Source<span class="badge">5</span></th><th>Shown<span class="badge">6</span></th><th>Matches</th><th><span class="badge">2</span><span class="badge">3</span></th></tr>
+          <tr><td>Cioppino</td><td>Main</td><td>520</td><td>38 g</td><td>41 g</td><td>18 g</td><td>Fish, shellfish</td><td><span class="tag posted">Posted</span></td><td>1,204</td><td>96</td><td>✎ &nbsp;🗑</td></tr>
+          <tr><td>Fennel citrus salad</td><td>Entrée</td><td>210</td><td>5 g</td><td>18 g</td><td>14 g</td><td>Tree nuts</td><td><span class="tag est">Estimated</span></td><td>860</td><td>41</td><td>✎ &nbsp;🗑</td></tr>
+          <tr><td>Sourdough</td><td>Side</td><td>180</td><td>6 g</td><td>34 g</td><td>2 g</td><td>Wheat</td><td><span class="tag est">Estimated</span></td><td>655</td><td>22</td><td>✎ &nbsp;🗑</td></tr>
+          <tr><td>Tiramisu</td><td>Dessert</td><td>410</td><td>7 g</td><td>44 g</td><td>22 g</td><td>Milk, eggs, wheat</td><td><span class="tag posted">Posted</span></td><td>730</td><td>58</td><td>✎ &nbsp;🗑</td></tr>
+        </table>
+        <div style="margin-top:14px;font-size:13px;color:#7a5a71">Shown and Matches: last 30 days.</div>
+      </div>
+      <div class="side">
+        <h2 style="font-size:20px">Visibility tier<span class="badge">7</span></h2>
+        <div class="tier cur">Free<small>current · standard ranking</small></div>
+        <div class="tier">Pro Silver<small>ranked ahead among equally fitting meals</small></div>
+        <div class="tier">Pro Gold<small>ranked ahead among equally fitting meals</small></div>
+        <div class="ghost" style="display:inline-block;margin-top:6px">Change tier</div>
+      </div>
+    </div>
+  </div>
+  <div class="key">
+    <div><b>1</b><span>Add a food item<em>FR-13.1</em></span></div>
+    <div><b>2</b><span>Edit a food item<em>FR-13.2</em></span></div>
+    <div><b>3</b><span>Delete a food item<em>FR-13.3</em></span></div>
+    <div><b>4</b><span>Import a menu from a web page or file<em>FR-13.4, FR-16.1</em></span></div>
+    <div><b>5</b><span>Posted or estimated value<em>NFR-07, NFR-08</em></span></div>
+    <div><b>6</b><span>Times shown and matches per item<em>FR-15.1, FR-15.2</em></span></div>
+    <div><b>7</b><span>Choose a listing tier<em>FR-14.1, FR-14.2</em></span></div>
+    <div><span style="color:#9C7A92;font-size:13px">Wireframe. Values are illustrative.</span></div>
+  </div>
+</div>
+</body></html>

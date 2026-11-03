@@ -168,7 +168,7 @@ config:
     usage_pattern: Primarily weekend and evening usage
     uses_per_day: Once per day or less
     use_duration: Quick task (under 5 minutes); design target 1 minute
-  latency_percentile_target: p90 on Search and Discovery at app open (Ultra-Low, <2 ms)
+  latency_percentile_target: p90 on Search and Discovery at app open (Low, <=200 ms)
   data_characteristics: Federated, with a localized element for on-device targets
   data_update_frequency: Periodic updates (daily or weekly)
   data_pipelines: [Content Processing, Data Integration]

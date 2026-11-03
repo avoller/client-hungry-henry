@@ -1,0 +1,192 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;background:#fff}
+  svg{display:block;font-family:"Segoe UI",Inter,Arial,sans-serif}
+  .zone{font-size:20px;fill:#7a5a71;letter-spacing:.5px}
+  .lbl{font-size:16px;fill:#503047}
+  .lblb{font-size:16px;fill:#503047;font-weight:600}
+  .id{font-size:14px;fill:#50663C;font-weight:600}
+  .blk{font-size:19px;fill:#fff;font-weight:600}
+  .blkid{font-size:14px;fill:#FFD7CD}
+  .ext{font-size:17px;fill:#503047;font-weight:600}
+  .wire{font-size:13px;fill:#503047}
+  .ln{stroke:#9C7A92;stroke-width:2;fill:none}
+  .dash{stroke-dasharray:7 6}
+</style></head><body>
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9C7A92"/>
+    </marker>
+  </defs>
+
+  <!-- zones -->
+  <rect x="20" y="30" width="470" height="950" rx="16" fill="none" stroke="#c9a9c0" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="40" y="62" class="zone">fitness enthusiast's devices</text>
+  <rect x="590" y="30" width="490" height="700" rx="16" fill="#EFF9E8" stroke="#ADC698" stroke-width="2"/>
+  <text x="610" y="62" class="zone">public cloud · C-002</text>
+  <rect x="1160" y="30" width="420" height="700" rx="16" fill="none" stroke="#c9a9c0" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="1180" y="62" class="zone">external systems</text>
+  <rect x="590" y="770" width="490" height="222" rx="16" fill="none" stroke="#c9a9c0" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="610" y="802" class="zone">other actors</text>
+
+  <!-- iPhone -->
+  <rect x="250" y="100" width="210" height="430" rx="34" fill="#503047"/>
+  <rect x="262" y="118" width="186" height="394" rx="24" fill="#fff"/>
+  <rect x="276" y="136" width="96" height="22" rx="11" fill="#B43B1F"/>
+  <text x="286" y="152" font-size="13" fill="#fff" font-weight="600">Sotto Mare</text>
+  <text x="276" y="176" font-size="11" fill="#7a5a71">★ 4.6 · 0.4 mi</text>
+  <rect x="276" y="186" width="158" height="34" rx="6" fill="none" stroke="#c9a9c0"/>
+  <rect x="276" y="228" width="158" height="34" rx="6" fill="none" stroke="#c9a9c0"/>
+  <rect x="276" y="270" width="158" height="34" rx="6" fill="none" stroke="#c9a9c0"/>
+  <text x="284" y="208" font-size="12" fill="#503047">Cioppino · 320 kcal</text>
+  <text x="284" y="250" font-size="12" fill="#503047">Sourdough · 180 kcal</text>
+  <text x="284" y="292" font-size="12" fill="#503047">Tiramisu · 410 kcal</text>
+  <line x1="276" y1="330" x2="434" y2="330" stroke="#c9a9c0"/>
+  <text x="280" y="352" font-size="12" fill="#503047">1,720   48   162   54</text>
+  <text x="280" y="368" font-size="10" fill="#50663C">−80   hit   +12   hit</text>
+  <rect x="280" y="378" width="58" height="16" rx="8" fill="#D0E3C4"/>
+  <rect x="344" y="378" width="52" height="16" rx="8" fill="#D0E3C4"/>
+  <circle cx="290" cy="430" r="13" fill="none" stroke="#9C7A92" stroke-width="1.5"/>
+  <circle cx="322" cy="430" r="13" fill="none" stroke="#9C7A92" stroke-width="1.5"/>
+  <circle cx="355" cy="430" r="19" fill="#B43B1F"/>
+  <circle cx="388" cy="430" r="13" fill="none" stroke="#9C7A92" stroke-width="1.5"/>
+  <circle cx="420" cy="430" r="13" fill="none" stroke="#9C7A92" stroke-width="1.5"/>
+  <rect x="272" y="470" width="166" height="30" rx="15" fill="none" stroke="#9C7A92"/>
+  <text x="284" y="490" font-size="11" fill="#503047">Eat   Map   Filters   Account</text>
+  <!-- GPS chip -->
+  <circle cx="256" cy="146" r="6" fill="#ADC698" stroke="#50663C"/>
+
+  <!-- phone callouts -->
+  <g text-anchor="end">
+    <text x="228" y="196" class="lblb">Touchscreen display</text>
+    <text x="228" y="216" class="lbl">primary HMI</text>
+    <text x="228" y="234" class="id">HLR-01 to HLR-12</text>
+    <text x="228" y="120" class="lblb">GPS receiver</text>
+    <text x="228" y="140" class="lbl">search point</text>
+    <text x="228" y="158" class="id">HLR-02, HLR-03</text>
+    <text x="228" y="414" class="lblb">Buttons</text>
+    <text x="228" y="434" class="lbl">back, save, Match,</text>
+    <text x="228" y="452" class="lbl">add, Forward</text>
+    <text x="228" y="470" class="id">HLR-04, 05, 07</text>
+  </g>
+  <path d="M232,140 L249,145" class="ln"/>
+  <path d="M232,212 L262,212" class="ln"/>
+  <path d="M232,430 L275,430" class="ln"/>
+
+  <!-- on-device apps -->
+  <rect x="40" y="600" width="190" height="66" rx="8" fill="#fff" stroke="#9C7A92" stroke-width="2"/>
+  <text x="56" y="628" class="ext">Google Maps</text>
+  <text x="56" y="652" class="id">C-005 · HLR-06</text>
+  <rect x="40" y="690" width="190" height="66" rx="8" fill="#fff" stroke="#9C7A92" stroke-width="2"/>
+  <text x="56" y="718" class="ext">Instagram</text>
+  <text x="56" y="742" class="id">C-006 · HLR-08</text>
+  <path d="M272,532 L196,598" class="ln" marker-end="url(#a)"/>
+  <path d="M262,524 L246,540 L246,723 L234,723" class="ln" marker-end="url(#a)"/>
+  <text x="130" y="574" class="wire">directions</text>
+  <text x="254" y="660" class="wire">share graphic</text>
+
+  <!-- wearable, post-MVP -->
+  <rect x="330" y="760" width="56" height="200" rx="10" fill="none" stroke="#c9a9c0" stroke-width="2" class="dash"/>
+  <rect x="306" y="805" width="104" height="104" rx="26" fill="#fff" stroke="#9C7A92" stroke-width="2" class="dash"/>
+  <path d="M332,860 l14,0 l8,-18 l10,34 l8,-16 l16,0" stroke="#B43B1F" stroke-width="2.5" fill="none"/>
+  <text x="290" y="836" class="lblb" text-anchor="end">Wearable</text>
+  <text x="290" y="856" class="lbl" text-anchor="end">active-calorie sensor</text>
+  <text x="290" y="874" class="lbl" text-anchor="end">post-MVP</text>
+  <text x="290" y="892" class="id" text-anchor="end">HLR-18</text>
+  <path d="M358,758 L358,534" class="ln dash" marker-end="url(#a)"/>
+  <text x="366" y="690" class="wire">active kcal</text>
+
+  <!-- phone <-> cloud -->
+  <path d="M462,140 L628,140" class="ln" marker-end="url(#a)"/>
+  <path d="M628,190 L462,190" class="ln" marker-end="url(#a)"/>
+  <text x="472" y="130" class="wire">location, targets</text>
+  <text x="472" y="212" class="wire">meals, deviance</text>
+  <circle cx="530" cy="140" r="7" fill="#ADC698" stroke="#50663C"/>
+
+  <path d="M462,290 L628,290" class="ln" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="472" y="280" class="wire">match, save, review</text>
+  <circle cx="530" cy="290" r="7" fill="#ADC698" stroke="#50663C"/>
+  <!-- cloud function blocks -->
+  <rect x="630" y="100" width="410" height="120" rx="8" fill="#B43B1F"/>
+  <text x="650" y="140" class="blk">Meal generation and scoring</text>
+  <text x="650" y="166" class="blkid">targets in, fitting meals out</text>
+  <text x="650" y="190" class="blkid">HLR-02, HLR-03, HLR-04, HLR-11</text>
+  <rect x="630" y="240" width="410" height="120" rx="8" fill="#B43B1F"/>
+  <text x="650" y="280" class="blk">Accounts, matches and membership</text>
+  <text x="650" y="306" class="blkid">saved meals, collections, reviews, tier</text>
+  <text x="650" y="330" class="blkid">HLR-05, 07, 09, 10, 12</text>
+  <rect x="630" y="380" width="410" height="120" rx="8" fill="#B43B1F"/>
+  <text x="650" y="420" class="blk">Menu and nutrition records</text>
+  <text x="650" y="446" class="blkid">posted or estimated values, daily refresh</text>
+  <text x="650" y="470" class="blkid">HLR-13, HLR-16</text>
+  <rect x="630" y="520" width="410" height="120" rx="8" fill="#B43B1F"/>
+  <text x="650" y="560" class="blk">Health monitoring</text>
+  <text x="650" y="586" class="blkid">capacity, error rate, latency</text>
+  <text x="650" y="610" class="blkid">HLR-17</text>
+  <text x="610" y="86" class="wire" fill="#7a5a71">functions, not modules: internal structure is left to design</text>
+
+  <!-- external systems -->
+  <g>
+    <rect x="1190" y="90" width="360" height="62" rx="8" fill="#fff" stroke="#9C7A92" stroke-width="2"/>
+    <text x="1210" y="116" class="ext">Google Places</text>
+    <text x="1210" y="139" class="id">C-003 · venue, rating, distance</text>
+    <rect x="1190" y="166" width="360" height="62" rx="8" fill="#fff" stroke="#9C7A92" stroke-width="2"/>
+    <text x="1210" y="192" class="ext">Generative AI service</text>
+    <text x="1210" y="215" class="id">C-015 · Ask Henry</text>
+    <rect x="1190" y="270" width="360" height="62" rx="8" fill="#fff" stroke="#9C7A92" stroke-width="2"/>
+    <text x="1210" y="296" class="ext">Apple App Store</text>
+    <text x="1210" y="319" class="id">C-007 · Paid membership</text>
+    <rect x="1190" y="380" width="360" height="62" rx="8" fill="#fff" stroke="#9C7A92" stroke-width="2"/>
+    <text x="1210" y="406" class="ext">USDA FoodData Central</text>
+    <text x="1210" y="429" class="id">C-004 · reference nutrients</text>
+    <rect x="1190" y="456" width="360" height="62" rx="8" fill="#fff" stroke="#9C7A92" stroke-width="2"/>
+    <text x="1210" y="482" class="ext">Restaurant websites</text>
+    <text x="1210" y="505" class="id">HLR-16 · posted menus</text>
+  </g>
+  <path d="M1042,121 L1188,121" class="ln" marker-start="url(#a)" marker-end="url(#a)"/>
+  <circle cx="1115" cy="121" r="7" fill="#ADC698" stroke="#50663C"/>
+  <path d="M1042,197 L1188,197" class="ln" marker-start="url(#a)" marker-end="url(#a)"/>
+  <path d="M1042,301 L1188,301" class="ln" marker-start="url(#a)" marker-end="url(#a)"/>
+  <path d="M1188,411 L1044,411" class="ln" marker-end="url(#a)"/>
+  <path d="M1188,487 L1044,487" class="ln" marker-end="url(#a)"/>
+
+  <!-- restaurant owner laptop -->
+  <rect x="640" y="822" width="180" height="96" rx="6" fill="#fff" stroke="#503047" stroke-width="3"/>
+  <rect x="652" y="834" width="156" height="14" rx="3" fill="#D0E3C4"/>
+  <line x1="652" y1="860" x2="808" y2="860" stroke="#c9a9c0"/>
+  <line x1="652" y1="876" x2="808" y2="876" stroke="#c9a9c0"/>
+  <rect x="740" y="892" width="64" height="16" rx="8" fill="#B43B1F"/>
+  <path d="M620,918 L840,918 L858,934 L602,934 z" fill="#503047"/>
+  <text x="602" y="958" class="lblb">Restaurant owner · vendor portal (web)</text>
+  <text x="602" y="978" class="id">HLR-13, HLR-14, HLR-15</text>
+  <path d="M720,820 L720,748 L610,748 L610,440 L628,440" class="ln" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="620" y="684" class="wire">menu items, tier ↑</text>
+  <text x="620" y="702" class="wire">shown, matches ↓</text>
+
+  <!-- system administrator phone -->
+  <rect x="980" y="805" width="68" height="130" rx="14" fill="#503047"/>
+  <rect x="987" y="818" width="54" height="104" rx="8" fill="#fff"/>
+  <path d="M1004,862 q10,-26 20,0 l4,10 h-28 z" fill="#B43B1F"/>
+  <circle cx="1014" cy="878" r="4" fill="#B43B1F"/>
+  <text x="1064" y="955" class="lblb" text-anchor="end">System administrator</text>
+  <text x="1064" y="974" class="lbl" text-anchor="end">alert on mobile · HLR-17</text>
+  <path d="M1014,642 L1014,800" class="ln" marker-end="url(#a)"/>
+  <text x="1022" y="730" class="wire">alert</text>
+
+  <!-- legend -->
+  <g transform="translate(1190,790)">
+    <text x="0" y="0" class="lblb">Legend</text>
+    <line x1="0" y1="30" x2="60" y2="30" class="ln"/>
+    <text x="74" y="35" class="lbl">v1.0 data flow</text>
+    <line x1="0" y1="62" x2="60" y2="62" class="ln dash"/>
+    <text x="74" y="67" class="lbl">post-MVP</text>
+    <circle cx="30" cy="94" r="7" fill="#ADC698" stroke="#50663C"/>
+    <text x="74" y="99" class="lbl">personal data crosses a boundary</text>
+    <rect x="0" y="118" width="60" height="22" rx="4" fill="#B43B1F"/>
+    <text x="74" y="135" class="lbl">Hungry Henry function</text>
+    <text x="0" y="172" class="id">IDs: HLR in Section 3.1, C in Section 3.3</text>
+  </g>
+</svg>
+</body></html>

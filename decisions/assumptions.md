@@ -361,3 +361,111 @@ Unsourced claims in the Hungry Henry engagement. Client-supplied figures are not
 - **Depends on it:** Workbook §2.2 TAM; §4.2 Pricing Model; §4.4 value proposition; §5.1 units sold.
 - **Raised:** 2026-11-03
 - **Resolved:** —
+
+## ASM-031 — Default tolerance of 10%, widened to at most 25%
+
+- **Claim:** A meal total is a hit when it is within 10% of its bound by default, and the Fitness Enthusiast can widen that to at most 25%.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** None sourced. 10% of a 1,800 kcal remaining target is 180 kcal, close to the desired 150 kcal Cheat-Meal Calorie SD, so the default does not undo the outcome. 25% is a ceiling past which a "hit" stops meaning anything.
+- **Test:** In the prototype usability test, record the tolerance each participant settles on. Revise the default if the median participant widens it past 15%.
+- **Depends on it:** Requirements Workbook §1.3 Tolerance; FR-02.7; the meaning of "fit" in FR-02.1.
+- **Raised:** 2026-11-03
+- **Resolved:** —
+
+## ASM-032 — Search radius defaults to 5 miles, settable from 1 to 25
+
+- **Claim:** Restaurants within 5 miles of the Fitness Enthusiast's GPS location are considered by default; the radius can be set from 1 to 25 miles.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** None sourced. Dine-out in a launch metro is a short drive or walk; 25 miles covers a suburban evening out.
+- **Test:** Log the distance to the matched restaurant across the first 1,000 matches. Set the default to the 80th percentile of that distance.
+- **Depends on it:** Requirements Workbook §1.3 Search radius; FR-02.1; FR-03.4.
+- **Raised:** 2026-11-03
+- **Resolved:** —
+
+## ASM-033 — Critical capacity is 80% utilization for 5 minutes
+
+- **Claim:** Infrastructure is at critical capacity when any production compute, memory or storage resource stays above 80% utilization for 5 consecutive minutes.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** medium
+- **Basis:** A common operations alerting threshold that leaves headroom to scale before saturation. Not measured on this product.
+- **Test:** Load test at the NFR-04 concurrency. Lower the threshold if latency breaches NFR-01 to NFR-03 below 80% utilization.
+- **Depends on it:** Requirements Workbook FR-17.1.
+- **Raised:** 2026-11-03
+- **Resolved:** —
+
+## ASM-034 — Abnormal user-facing symptoms are a 1% error rate or a p90 latency miss for 5 minutes
+
+- **Claim:** User-facing behaviour is abnormal when more than 1% of requests fail, or any of NFR-01 to NFR-03 is missed at p90, over 5 consecutive minutes.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** medium
+- **Basis:** 1% sits well above the error rate a 99.9% availability target implies, so it flags a real fault rather than noise. Not measured on this product.
+- **Test:** Replay the first month of production traffic. Adjust if the thresholds fire more than once a week without a real fault.
+- **Depends on it:** Requirements Workbook FR-17.2; FR-17.3.
+- **Raised:** 2026-11-03
+- **Resolved:** —
+
+## ASM-035 — Mean time to restore is 1 hour
+
+- **Claim:** The user-facing service is restored within a mean of 1 hour of the first alert.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** Chosen so that 99.9% availability needs an MTTF of 999 hours, about one user-facing failure every 42 days. A one-person operations team on a public cloud.
+- **Test:** Two game-day restores before launch. Revise if either takes longer than 1 hour.
+- **Depends on it:** Requirements Workbook NFR-16; NFR-17.
+- **Raised:** 2026-11-03
+- **Resolved:** —
+
+## ASM-036 — An operational alert reaches the administrator within 60 seconds
+
+- **Claim:** An alert is delivered to the System Administrator's mobile device within 60 seconds of the fault condition being met.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** medium
+- **Basis:** Small against the 1-hour MTTR in ASM-035, so alert delay does not consume the restore budget.
+- **Test:** Trigger each FR-17 condition in staging and time delivery to the device, 20 trials each.
+- **Depends on it:** Requirements Workbook NFR-19.
+- **Raised:** 2026-11-03
+- **Resolved:** —
+
+## ASM-037 — CCPA/CPRA consumer rights apply to every user
+
+- **Claim:** Hungry Henry gives every user the CCPA/CPRA consumer rights, including deletion within 45 days, whether or not the statutory business thresholds are met.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** medium
+- **Basis:** The Product Idea Workbook states the data may fall under CCPA/CPRA. With 30,375 to 91,125 users nationwide in EOY 1 to 3, the thresholds may not be met at launch; applying the rights to everyone avoids a second policy later.
+- **Test:** Legal review of the thresholds in Cal. Civ. Code §1798.140 against the EOY 1 revenue and California user count.
+- **Depends on it:** Requirements Workbook C-010; NFR-13.
+- **Raised:** 2026-11-03
+- **Resolved:** —
+
+## ASM-038 — The share graphic is 1080 × 1920 pixels
+
+- **Claim:** An Instagram story graphic is 1080 × 1920 pixels at 9:16.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** high
+- **Basis:** Third-party size guides agree on 1080 × 1920 at 9:16; Meta's own Ads Guide was not confirmed, and some guides give 1440 × 2560 as the recommended master.
+- **Test:** Read Meta's current Stories specification and post a test graphic before the Share feature is built.
+- **Depends on it:** Requirements Workbook C-006; FR-08.1.
+- **Raised:** 2026-11-03
+- **Resolved:** —
+
+## ASM-039 — Fall back to stored data after 1 second, if it is under 24 hours old
+
+- **Claim:** When an external data source does not answer within 1 second, meals are generated from that source's last stored data, provided it is no older than 24 hours.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** medium
+- **Basis:** 1 second is the medium latency ceiling that NFR-02 allows for a search; 24 hours matches the daily menu refresh in the Product Idea Workbook's data profile.
+- **Test:** Fault-injection test with each external source blocked; confirm meals still generate within NFR-02.
+- **Depends on it:** Requirements Workbook NFR-18.
+- **Raised:** 2026-11-03
+- **Resolved:** —
