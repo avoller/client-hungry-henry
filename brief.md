@@ -29,11 +29,12 @@ config:
     log food — so the pain is frequent, they have shown willingness to pay for
     adjacent tools, and access is cheap.
   price_point: >
-    Free $0 per member; Paid $14.40 per member per year. Restaurant listing
-    fees are excluded from this workbook.
+    Free $0 per member; Paid $10 per member per month ($120 a year), which buys
+    Ask Henry and saved target templates. Restaurant visibility fees are excluded from
+    this workbook.
   pricing_strategy: segmented
   pricing_metric: per member
-  consumer_price: $0 Free per member; $14.40 Paid per member per year
+  consumer_price: $0 Free; $10 per month Paid
   paid_price: $14.40 per member per year
   paid_price_basis: >
     Free includes every macro, so the 20-minute search saving ($480 a year)
@@ -133,6 +134,44 @@ config:
   requirements_workbook_title: "Requirements Workbook"
   requirements_workbook_basename: hungry-henry-requirements-workbook
   requirements_workbook_version: "0.2"
+  workbook_version: "1.1"
+  course: 17-629 Product Management Essentials II
+  product_vision_statement: >
+    Hungry Henry will make dieting fun, flexible and achievable: every meal you
+    want, built to fit the goal you are on.
+  product_vision_horizon: ten years
+  desired_outcome_summary: >
+    The Ave. Meal Search Time will be 1 minute. The Ave. Plan Completion Rate
+    will be 75%. The Ave. Cheat-Meal Calorie SD will be 150 kcal.
+  v1_features: [Search and Discovery, Edit meals, Get directions, Match, Save for later, Share, Review, Target templates, Ask Henry]
+  product_future_line: >
+    Henry (consumer app) -> Ask Henry (planner) -> Henry for Restaurants
+    (operator product) -> Henry Social -> Henry Platform (verified
+    meal-and-nutrition graph over an API).
+  product_strategy_type: Horizontal Product, on a Marketplace Platform business model, with Product Versioning and later Product Augmentation
+  ansoff_quadrant: Market Development (existing product, new market)
+  first_strategic_move: >
+    Option 1 - a new market with the same product: the matcher into Delivery
+    Regulars (22.68M) and Takeout Regulars (21.87M) in EOY 2. The restaurant
+    side is already paying from v1.0, so it is not a second act.
+  advantage_sources: [network effects, proprietary data, switching costs, cost advantage]
+  advantage_sustainable: >
+    Not at v1.0 - defensibility is the only weak answer. Becomes sustainable as
+    the exclusive data pipeline behind Ask Henry accumulates.
+  development_start_date: 2027-01-01
+  development_duration_months: 12.8
+  product_introduction_date: January 2028
+  roadmap_periods: [2028, 2029, 2030]
+  load_profile:
+    users_first_full_year: 30375
+    location: Regional
+    usage_pattern: Primarily weekend and evening usage
+    uses_per_day: Once per day or less
+    use_duration: Quick task (under 5 minutes); design target 1 minute
+  latency_percentile_target: p90 on Search and Discovery at app open (Ultra-Low, <2 ms)
+  data_characteristics: Federated, with a localized element for on-device targets
+  data_update_frequency: Periodic updates (daily or weekly)
+  data_pipelines: [Content Processing, Data Integration]
 ---
 
 # Hungry Henry — brief

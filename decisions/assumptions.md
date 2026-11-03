@@ -245,14 +245,14 @@ Unsourced claims in the Hungry Henry engagement. Client-supplied figures are not
 ## ASM-021 — Beachhead-city design load is 10,000 concurrent match requests
 
 - **Claim:** NF3 sizes Friday-night Home traffic at 10,000 concurrent match requests in one city.
-- **Status:** open
+- **Status:** superseded by ASM-029
 - **Owner:** Alex Voller
 - **Confidence:** low
 - **Basis:** Order-of-magnitude for a first city, not a forecast.
 - **Test:** After 90 days in the beachhead city, replace with observed peak concurrent match requests × 2.
-- **Depends on it:** Workbook §3.5 NF3.
+- **Depends on it:** Workbook §3.5 NF3. No longer load-bearing.
 - **Raised:** 2026-09-22
-- **Resolved:** —
+- **Resolved:** 2026-11-02 — replaced by the load-profile arithmetic in the Appendix, which derives design concurrency from the EOY 1 user goal rather than an order-of-magnitude guess.
 
 ## ASM-022 — Paid mix 70% Free / 22% Silver / 8% Gold is a sensitivity only
 
@@ -336,4 +336,28 @@ Unsourced claims in the Hungry Henry engagement. Client-supplied figures are not
 - **Test:** After EOY 1, divide Free installs by Paid memberships. Confirm if the ratio is between 20:1 and 40:1.
 - **Depends on it:** Workbook §5.1 paid, free, and units-sold rows. Total users do not move.
 - **Raised:** 2026-10-24
+- **Resolved:** —
+
+## ASM-029 — Evening-window concentration of 60% and a 3x within-window peak
+
+- **Claim:** 60% of restaurant-meal occasions fall in the Friday-to-Sunday 17:00-21:00 window, and peak concurrency inside that window runs 3x the window average, giving a design concurrency of 106 sessions at EOY 1 and 318 at EOY 3 against the one-minute search target, or 530 and 1,590 at the five-minute ceiling of the Quick task band.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** The product is named for the cheat meal and the client's pitch frames it as a Friday night, so demand is concentrated rather than uniform. Neither the 60% share nor the 3x multiplier is measured; they set the shape of the load, not its absolute size.
+- **Test:** Instrument session start times for the first 90 days in the beachhead metro. Replace 60% with the observed Friday-Sunday evening share and the 3x with observed peak-to-window-average concurrency.
+- **Depends on it:** Workbook §5.7 Load Profile; the load-profile arithmetic in the Appendix. Supersedes ASM-021.
+- **Raised:** 2026-11-02
+- **Resolved:** —
+
+## ASM-030 — $10 a month is an acceptable price for the paid tier
+
+- **Claim:** Fitness Enthusiasts will pay $10 per month, $120 a year, for Ask Henry and saved target templates.
+- **Status:** open
+- **Owner:** Alex Voller
+- **Confidence:** low
+- **Basis:** None. Measured against the free product, Ask Henry saves 50 seconds per occasion — one hour a year, worth $20 at $20 an hour — so the price is not supported by time saved against Free, though it clears comfortably against today's 23-minute search. It rests on the variety benefit of the *try something new* and *in-season* toggles, which targets the plan-completion outcome in §1.4 and carries no dollar figure in this workbook.
+- **Test:** Van Westendorp or Gabor-Granger with 150 beachhead users before the paid tier is built. If the acceptable range tops out below $10, either reprice or move a free feature behind the paywall.
+- **Depends on it:** Workbook §2.2 TAM; §4.2 Pricing Model; §4.4 value proposition; §5.1 units sold.
+- **Raised:** 2026-11-03
 - **Resolved:** —
