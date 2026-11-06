@@ -133,7 +133,7 @@ config:
   mvp_focus: Fitness Enthusiasts finding a meal
   requirements_workbook_title: "Requirements Workbook"
   requirements_workbook_basename: hungry-henry-requirements-workbook
-  requirements_workbook_version: "0.2"
+  requirements_workbook_version: "0.3"
   workbook_version: "1.2"
   course: 17-629 Product Management Essentials II
   product_vision_statement: >
