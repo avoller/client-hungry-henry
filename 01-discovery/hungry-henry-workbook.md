@@ -3,8 +3,8 @@
 **Product:** Hungry Henry
 **Prepared by:** Alexander Voller
 **Course:** 17-629 Product Management Essentials II
-**Document version:** 1.1
-**Date:** 3 November 2026
+**Document version:** 1.2
+**Date:** 5 November 2026
 
 ## Version History
 
@@ -12,6 +12,7 @@
 | --- | --- | --- |
 | 1.0 | 2026-10-07 | Initial document for Product Management Essentials I. |
 | 1.1 | 2026-11-03 | Rolling updates for Product Management Essentials II. |
+| 1.2 | 2026-11-05 | Added Section 6 Go To Market Space — Go To Market Strategy, Customer Relationship Journey, Customer Engagement Model. Valued the plan-completion and cheat-meal outcomes in Section 4, raising the Paid benefit-to-cost ratio from 4.6:1 to 8.8:1. |
 
 ## Table of Contents
 
@@ -452,7 +453,7 @@ Benefits are measured against the current state: Google Maps and posted menus.
 
 | Feature | Benefit(s) |
 | --- | --- |
-| Search and Discovery | The primary feature. Ave. Meal Search Time falls from 23 minutes to 1 minute — 22 minutes saved per occasion.[1] Search by food, by restaurant name, or on the map, with every suggestion already inside the nutrition range still available. Diet and allergy requirements remove the rest of the noise, so only valid meals are shown, each with its venue and distance. |
+| Search and Discovery | The primary feature. Ave. Meal Search Time falls from 23 minutes to 1 minute — 22 minutes saved per occasion.[1] Search by food, by restaurant name, or on the map, with every suggestion already inside the nutrition range still available. Diet and allergy requirements remove the rest of the noise, so only valid meals are shown, each with its venue and distance. Because every suggestion is already inside the remaining target, the meal is eaten without the next-day repair: Ave. Cheat-Meal Calorie SD falls from 500 kcal to 150 kcal, worth $277 a year in compensating effort the Fitness Enthusiast no longer spends (Section 4.4). |
 | Edit meals | Swap, add and remove items across starters, mains and desserts while the total nutrition is scored against the goal in real time, so a picky meal does not restart the search. |
 | Get directions | Match a meal and open directions to the venue in Google, so the admin after the decision does not undo the time the search saved. |
 | Match | Confirm the meal that will be eaten. It is saved to the list, so it can be found again. |
@@ -460,7 +461,7 @@ Benefits are measured against the current state: Google Maps and posted menus.
 | Share | Send a find to social media and promote sustainable eating. Every match produces a summary graphic built to be overlaid on an Instagram story. |
 | Review | Leave a star rating for a restaurant, and anything else a fellow Fitness Enthusiast would find useful. |
 | Target templates | Paid. Save preset nutrition values as named templates — a "midday baseline", a "training day cheat" — and start a search from one tap instead of setting four macros. The saving compounds across repeated searches, and it is what keeps the paid search at ten seconds on every occasion rather than only the first. |
-| Ask Henry | The paid feature. Ave. Meal Search Time falls again, from 1 minute to 10 seconds, for the Fitness Enthusiast who wants the meal immediately. Its *try something new* and *in-season* toggles surface meals they have not had before, which is what breaks the mundane cycle: Ave. Plan Completion Rate from 30% to 75% (`assumption:`). |
+| Ask Henry | The paid feature. Ave. Meal Search Time falls again, from 1 minute to 10 seconds, for the Fitness Enthusiast who wants the meal immediately. Its *try something new* and *in-season* toggles surface meals they have not had before, which is what breaks the mundane cycle: Ave. Plan Completion Rate from 30% to 75% (`assumption:`). That is the nutrition plan actually being maintained, and it is worth $234 a year of planning effort that no longer goes to waste on a week the Actor abandons (Section 4.4). |
 
 ### 2. Pricing Model
 
@@ -487,7 +488,7 @@ Value against today's search = (23 min - 10 sec) / 60 × 72 occasions × $20/hou
 
 Google Maps, how the meal is found today, costs $0, so this job has no paid reference price.[7]
 
-**What Paid is not sold on.** Measured against Free rather than against today, the paid tier saves 50 seconds per occasion — one hour a year, worth $20. That does not pay for $120 on time alone. The rest of the case is repeatability, which the saved templates give, and variety, which the *try something new* and *in-season* toggles give. Both target the plan-completion outcome in Section 1.4 rather than the time outcome, and neither is valued in money here. Willingness to pay $10 a month is the open question (ASM-030).
+**What Paid is sold on.** Measured against Free rather than against today, the paid tier saves 50 seconds per occasion — one hour a year, worth $20. Time alone does not pay for $120. The rest of the case is repeatability, which the saved templates give, and variety, which the *try something new* and *in-season* toggles give. Both target the plan-completion outcome in Section 1.4, and that outcome now carries a figure: a plan finished 75% of the time rather than 30% is worth $234 a year in planning effort that is no longer wasted (Section 4.4). Against Free, Paid therefore offers $254 a year of value for $120 — a 2.1:1 ratio, short of the 3:1 a low-friction purchase usually wants. Willingness to pay $10 a month is still the open question (ASM-030).
 
 **Payment structure.** Free has no charge. Paid is charged monthly to the Fitness Enthusiast, by card or the app store, and stops when it is cancelled.
 
@@ -505,23 +506,56 @@ Google Maps, how the meal is found today, costs $0, so this job has no paid refe
 
 **The offer is a restaurant meal that fits the goal, in ten seconds.** The same meal takes 23 minutes to find today.
 
-On Free the search takes a minute, and the benefit is the 22 minutes already sized — $528 a year against a one-time setup of $3.33.
+Three of the product's benefits carry a money figure, one for each outcome in Section 1.4. All three are valued at the $20 an hour used throughout this workbook.
+
+**Benefit 1 — the search time saved.** On Free the search falls from 23 minutes to 1 minute; on Paid, Ask Henry answers in 10 seconds.
 
 ```
-Free ratio = $528 / $3.33 = 158.6
+Free = (23 - 1) / 60 x 72 occasions x $20/hour      = $528 a year
+Paid = (23 min - 10 sec) / 60 x 72 x $20/hour       = $548 a year
 ```
 
-On Paid, Ask Henry chooses the meal and answers in ten seconds, and a saved target template removes the set-up step so those ten seconds hold on every occasion. Against today's search that is $548 a year against $120.
+**Benefit 2 — the cheat meal eaten without the repair.** Every suggestion is already inside the remaining target, so the meal does not have to be compensated for the next day. This benefit is on Free, because it comes from the nutrition-range search rather than from Ask Henry.
 
 ```
-Paid ratio = $548 / $120 = 4.6
+Blow-out or untracked occasions = 72 x 55%          = 39.6 a year[1][13]
+Repair effort today = 39.6 x 0.5 h x $20/hour       = $396 a year
+                      (assumption: 30 min of compensating effort per blow-out)
+Residual at a 150 kcal band = $396 x (150 / 500)    = $119 a year
+Value = $396 - $119                                 = $277 a year
 ```
 
-Both clear the bar. Low friction is compelling at about 3:1, and both offers are a small amount of money, a decision made in minutes, and easy to stop.
+**Benefit 3 — the nutrition plan maintained.** A plan finished 75% of the time rather than 30% means the week's planning and logging effort stops being spent on weeks that are abandoned. This benefit is on Paid, because Section 4.1 attributes the plan-completion outcome to Ask Henry's variety toggles.
 
-The honest qualification is that Paid only clears against *today's* search. Measured against Free, which the Fitness Enthusiast already has, the paid tier adds $20 a year of time against a $120 fee. It therefore rests on repeatability and on variety — a meal they would not have found alone — which target the plan-completion outcome and carry no dollar figure here. Free remains the right plan whenever the one-minute search is enough.
+```
+Planning and logging effort = 0.5 h/week x 52 x $20 = $520 a year
+                              (assumption: 30 min a week)
+Wasted today, at 30% completion = $520 x 70%        = $364 a year
+Wasted with Henry, at 75%       = $520 x 25%        = $130 a year
+Value = $364 - $130                                 = $234 a year
+```
 
-The other benefits in the features table stand and are not summed in money: cheat-meal scatter from 500 kcal to 150 kcal, and a plan finished 75 percent of the time rather than 30 percent.
+**Total benefits against total costs.** Costs are unchanged from Section 4.3: a one-time $3.33 of set-up on Free, and $120 a year on Paid.
+
+```
+Free benefits = $528 + $277            = $805 a year     against $3.33
+Free ratio    = $805 / $3.33           = 241.7 : 1
+
+Paid benefits = $548 + $277 + $234     = $1,059 a year   against $120
+Paid ratio    = $1,059 / $120          = 8.8 : 1
+```
+
+Both clear the bar comfortably. Low friction is compelling at about 3:1, and both offers are a small amount of money, a decision made in minutes, and easy to stop. Valuing the plan-completion and cheat-meal outcomes roughly doubles the Paid case, which previously rested on time alone at 4.6:1.
+
+**The honest qualification.** Those ratios are measured against *today's* search. Measured against Free, which the Fitness Enthusiast already has, Paid adds the 50 seconds an occasion — $20 a year — plus the $234 of plan completion.
+
+```
+Paid over Free = $20 + $234 = $254 a year   against $120   -> 2.1 : 1
+```
+
+That is a real case rather than the $20 it was before, but it is still short of 3:1, so the paid tier is sold on the plan being maintained and not on time. The two benefits that carry it are the two with assumed effort figures, which makes willingness to pay $10 a month the open question it already was (ASM-030). Free remains the right plan whenever the one-minute search is enough.
+
+Two benefits in the features table are still not summed in money, so the totals above understate rather than overstate: the meals a Fitness Enthusiast would not have found alone, and the social value of a match worth posting.
 
 ## 5. Product Strategy Space
 
@@ -722,7 +756,110 @@ No real-time streaming, ML or computer-vision pipeline at v1.0. A match is reque
 
 ## 6. Go To Market Space
 
-TBA
+### 1. Go To Market Strategy
+
+**Initial Motion(s).** Hungry Henry goes to market on Marketing Led Growth and Product Led Growth together, with PLG as the primary motion. MLG reaches the customer first: fitness influencers and restaurants post matched meals where the Fitness Enthusiast already looks at food. PLG does the rest: the shared meal opens in the product, and the product converts, retains and spreads itself.
+
+| Consideration | Hungry Henry | Implication |
+| --- | --- | --- |
+| Product complexity | One job: find a restaurant meal that fits the remaining target. | Self-explanatory. Favours PLG. |
+| Time-to-Value | A matched meal in about 1 minute on Free, 10 seconds on Paid. | Value in the first session. Favours PLG. |
+| Purchasing decision complexity | The Fitness Enthusiast is Initiator, User, Decider and Buyer (Section 1.2). | No one to sell to. Rules out SLG. |
+| Getting started complexity | A shared meal opens in the web portal with no download and no account. | Near-zero barrier. Favours PLG. |
+| Customer Awareness | The Actor follows fitness creators and posts food on Instagram, but is not searching for a meal matcher. | Easy to reach, demand must be created. Needs MLG. |
+| Economics | Blended AAS is $3.87 a year (Section 6.3). | Only low-cost acquisition closes: shares and collaborations, not bought media or sales. |
+
+**Key drivers present.** For PLG: no barrier to first use, self-service set-up, value in one minute, and a share graphic on every Match. For MLG: the customer is easy to find, and the message is clear and actionable — a meal that fits your macros, in a minute.
+
+**Key drivers lacking.** Free finishes the job, so Paid sells repeatability and variety rather than a withheld core. Nobody searches for a meal matcher yet, so MLG has to create demand, not capture it.
+
+**How the motions work here.** MLG, as the customer meets it:
+
+1. **Campaign creation.** Target Macro-Tracking Dine-Out Regulars with one message: a meal that fits your remaining macros, found in a minute.
+2. **Campaign execution.** Influencer posts and restaurant co-promotion on Instagram, each carrying a matched-meal link.
+3. **Customer engagement.** The viewer sees a real meal with its venue and macros.
+4. **Nurturing.** Content repeats the message across occasions: training day, cheat meal, travel.
+5. **Conversion.** The link opens the product, and PLG takes over.
+6. **Renew/Expand.** Restaurant reposts and creator content keep the product in the feed.
+
+PLG, the primary motion:
+
+1. **Discovery.** A shared matched meal from a creator, a restaurant or a friend.
+2. **Use.** The link opens the web portal on that meal. *Try yourself* asks only for location and the remaining target.
+3. **Gets Value.** Nearby meals inside the visitor's own target, in about a minute instead of 23.[1]
+4. **Purchases.** Repeat users pay $10 a month for saved templates and Ask Henry (Section 4.2).
+5. **Renews.** Templates and collections accumulate, and every Match produces another share, which restarts Discovery.
+
+**Most important factor.** Economics: $3.87 a year per member pays for no salesperson and no bought traffic, so acquisition has to come from shares and collaborations.
+
+**Most important concern.** Shares may not convert. Mitigation: track share → open → match → install from v1.0 (Section 6.2), so a weak step shows within weeks, and keep restaurant co-promotion as a second source of shares.
+
+**Future Motion(s).** The motion stays PLG and MLG across the roadmap (Section 5.5). What changes is the weight between them.
+
+- **2028, MVP.** PLG primary, MLG seeding. Dine-out regulars already share food, so the share loop has somewhere to run.
+- **2029, Delivery and Takeout Regulars.** PLG primary, MLG grows. The new segments arrive with no shares inside the product, so campaigns bring their first users. Price and plans do not change.
+- **2030, Henry for Restaurants and Henry Platform.** PLG and MLG extend to restaurant operators, reached through the same co-marketing and signing up self-serve. Their pricing is not set in this workbook; if it lands above the self-serve band, the motion is revisited then.
+
+**Per plan and segment.** One motion for Free, Paid and every consumer segment. They share one product, one price and one acquisition loop, so a second motion would duplicate the cost against the same $3.87.
+
+### 2. Customer Relationship Journey
+
+This is the customer's relationship with Hungry Henry, not the current-state meal search in Section 1.5.
+
+| Stage | Objective | Activities | Metric | Product requirement |
+| --- | --- | --- | --- | --- |
+| 1. Awareness | Be seen where food is already posted | Influencer collaborations; restaurant co-promotion; shared match graphics; app store listing | Impressions; unique portal visitors | Attribution on every share link — campaign, source, medium |
+| 2. Interest | Get a first look without a commitment | Shared link opens the meal in the web portal | Click-through rate to portal | A meal renders for a visitor with no account |
+| 3. Evaluation | Show a result against the visitor's own target | *Try yourself* button; target form; location request | Portal-to-target-set rate | Accept location and four macros without sign-up |
+| 4. Trial | Turn one result into an install | Install prompt after the first match; no paywall on search | Portal-to-install rate | Carry the portal's target and result into the installed app |
+| 5. Onboarding | First match inside the first session | Target templates offered at set-up; four-macro form; no tutorial | Time to first match; first-session match rate | Persist targets to the account on first run |
+| 6. Adoption | Be opened at the table, every occasion | Saved collections; Review; map and search entry points | Weekly active members; matches per member | Store preferences, targets, collections and history |
+| 7. Renewal | Keep the Paid month | Monthly charge; message naming meals matched and minutes saved | Paid retention rate; downgrade rate | Count matches and minutes saved per member, per month |
+| 8. Expansion | Move Free to Paid | In-app prompt at the set-up step; Ask Henry preview; template limit on Free | Free-to-Paid conversion rate | Meter the set-up step and gate templates by plan |
+| 9. Advocacy | Make matching public | Share graphic on every Match; referral credit; restaurant reposts | Share rate per match; referred installs | Generate the story graphic and track referred installs |
+
+**LTV:CAC.**
+
+```
+CAC     = ($15,000 influencer collaborations + $4,160 Instagram content) / 30,375 EOY 1 members
+        = $19,160 / 30,375 = $0.63 per member
+LTV     = $3.87 blended AAS x 3 years = $11.61 per member
+LTV:CAC = $11.61 / $0.63 = 18.4 : 1
+```
+
+`assumption:` $15,000 of influencer collaboration in EOY 1. `assumption:` content effort of 4 hours a week x 52 weeks x $20 an hour (Section 2.2). `assumption:` a three-year membership, the roadmap horizon. Restaurant co-promotion adds $0 per member, because the operators' visibility fees fund it.
+
+18.4:1 clears the 3:1 bar, but only because acquisition is near-free. Above $3.87 a member, the ratio falls under 3:1, so bought traffic would break it.
+
+### 3. Customer Engagement Model
+
+**Average Annual Spend per customer.** The customer is the user: one Fitness Enthusiast paying for their own membership.
+
+1. **Units per purchase:** one membership.
+2. **Purchases per year:** 12 monthly charges on Paid, none on Free.
+3. **Price:** $10 a month on Paid, $0 on Free (Section 4.2).
+4. **Other purchases:** none at v1.0. Restaurant visibility fees are paid by the Restaurant Operator, a separate customer this workbook does not price.
+
+```
+Paid     AAS = $10 x 12          = $120 per year
+Free     AAS = $0 x 12           =   $0 per year
+Blended  AAS = $120 / 31 members = $3.87 per year
+```
+
+The 30:1 free-to-paid ratio puts one Paid member in every 31, which matches 980 Paid memberships among 30,375 members in EOY 1 (Section 5.1).[14]
+
+| Plan | AAS | Band | Model | Activities |
+| --- | --- | --- | --- | --- |
+| Free | $0 | $0 – $1K | No Touch (Tech Touch) | Self-serve set-up; help centre; in-app prompts toward Paid |
+| Paid | $120 | $0 – $1K | No Touch (Tech Touch) | Automatic monthly charge; monthly value message; in-app support |
+
+**Why No Touch.** Both plans sit in the $0 – $1K band, so one model covers both plans and every consumer segment. The rest of the situation agrees: the product is simple and standard, volume is high at 91,125 members by EOY 3, and the customer is an individual, not a business.
+
+**Automated and human.** Onboarding, support, renewal and upgrade prompts are automated. The only human GTM work is marketing: the influencer and restaurant collaborations costed in Section 6.2. No sales, account management or customer success role is funded.
+
+**Across the roadmap.** Delivery and Takeout Regulars join in 2029 on the same plans and price, so the AAS and the model do not change. Henry for Restaurants and Henry Platform bring a business customer in 2030 whose spend this workbook does not price; its model is chosen when it is priced.
+
+**Consistency with the motion.** No Touch fits PLG and MLG: the product and the marketing do the work, and neither needs a person on the account. Nothing gives way.
 
 ## 7. Product Financials Space
 

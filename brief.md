@@ -134,7 +134,7 @@ config:
   requirements_workbook_title: "Requirements Workbook"
   requirements_workbook_basename: hungry-henry-requirements-workbook
   requirements_workbook_version: "0.2"
-  workbook_version: "1.1"
+  workbook_version: "1.2"
   course: 17-629 Product Management Essentials II
   product_vision_statement: >
     Hungry Henry will make dieting fun, flexible and achievable: every meal you
@@ -172,6 +172,50 @@ config:
   data_characteristics: Federated, with a localized element for on-device targets
   data_update_frequency: Periodic updates (daily or weekly)
   data_pipelines: [Content Processing, Data Integration]
+  gtm_primary_motion: Product Led Growth
+  gtm_secondary_motion: >
+    Marketing Led Growth, run together with PLG and met first: influencer
+    collaborations and restaurant co-promotion on Instagram create the demand,
+    each post carrying a matched-meal link into the product.
+  gtm_motion_mechanism: >
+    A matched meal is shareable. The share link opens the meal in a reduced web
+    portal that asks only for location and the day's remaining target, with a
+    try-yourself button and no account, and leads to the app download.
+    Restaurant customers share their own matched meals through the same feature.
+  gtm_future_motions: >
+    PLG and MLG throughout; only the weight shifts. 2028 PLG primary with MLG
+    seeding. 2029 MLG grows to bring Delivery and Takeout Regulars in. 2030 the
+    same motions extend to restaurant operators for Henry for Restaurants and
+    Henry Platform, revisited if their unset pricing lands above the self-serve band.
+  aas_paid: $120 per member per year
+  aas_free: $0 per member per year
+  aas_blended: $3.87 per member per year
+  aas_blended_basis: >
+    $120 Paid annual price divided by 31, since the 30:1 free-to-paid ratio puts
+    one Paid member in every 31. Reconciles with 30,375 EOY 1 members and 980
+    Paid memberships.
+  customer_engagement_model: No Touch (Tech Touch)
+  customer_engagement_model_basis: >
+    All three AAS figures — $0 Free, $120 Paid, $3.87 blended — sit in the
+    $0–$1K band, so one model covers both plans and every consumer segment.
+    Simple standard product, high volume, individual customer. A restaurant
+    chain or API licensee in 2030 would need its own model, flagged not chosen.
+  cac_eoy1: $0.63 per member
+  cac_eoy1_basis: >
+    $19,160 EOY 1 acquisition spend over 30,375 members. Spend is $15,000 of
+    influencer collaboration plus $4,160 of Instagram content effort (4 h a week
+    at $20 an hour), both assumption:. Restaurant co-promotion is $0 incremental
+    because the visibility fees fund it, and those fees are priced outside this
+    workbook.
+  ltv_blended: $11.61 per member
+  ltv_cac_ratio: 18.4:1
+  ltv_assumed_lifetime: 3 years, matching the roadmap horizon (assumption:)
+  customer_value_monetised_outcomes: >
+    All three Section 1.4 outcomes now carry a money figure at $20 an hour:
+    search time ($528 Free, $548 Paid), cheat-meal repair avoided ($277, on Free
+    because it comes from the nutrition-range search), and plan completion ($234,
+    on Paid because Section 4.1 attributes it to Ask Henry). Free 241.7:1, Paid
+    8.8:1, Paid over Free 2.1:1.
 ---
 
 # Hungry Henry — brief
